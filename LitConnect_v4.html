@@ -3768,9 +3768,6 @@ P.J. : Copie lettre expert du [DATE] — Photos état actuel des dégâts</pre>
       </div></div>
     </div>
 
-  </div>
-  </div>
-</div>
 
 </main>
 
@@ -4216,134 +4213,191 @@ function renderIRSITree(){
   var c=document.getElementById('irsi-tree-container');
   if(!c||c.innerHTML.trim()!=='')return;
 
-  var OK='#166534',KO='#991B1B',WARN='#B8882A',BLUE='#1D4ED8';
-  var NK='#F0FDF4',KNK='#FEF2F2',PNK='#FBF6E9',BNK='#EFF6FF';
+  var W=1060,H=1560,CX=530;
+  var s='<svg viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" '
+       +'style="width:100%;max-width:'+W+'px;display:block;font-family:Figtree,sans-serif">';
+  var BLU='#1D4ED8',BB='#EFF6FF',BK='#DBEAFE';
+  var PRP='#6B21A8',PB='#F3E8FF';
+  var GRN='#166534',GB='#F0FDF4',GK='#BBF7D0';
+  var RED='#991B1B',RB='#FEF2F2',RK='#FECACA';
+  var ORG='#92400E',OB='#FBF6E9';
+  var GRY='#6B7080',YB='#F9F9F8',YK='#E5E5E3';
+  var NK2='#0D1117';
+  var LX=148,RX=912; // left/right outcome columns
 
-  function nd(id,label,bg,col){
-    return '<div style="display:inline-flex;flex-direction:column;align-items:center;gap:0">'
-      +'<div style="padding:6px 12px;background:'+bg+';color:'+col+';border:1.5px solid '+col+'40;border-radius:6px;font-weight:700;font-size:10.5px;max-width:190px;text-align:center;line-height:1.4">'
-      +id+'<br><span style="font-weight:400;font-size:10px">'+label+'</span></div>'
-      +'<div style="width:1px;height:12px;background:#9CA3AF"></div></div>';
+  /* helpers */
+  function bx(cx,cy,w,h,rx,fill,stroke,sw){
+    sw=sw||1.5;var x=cx-w/2,y=cy-h/2;
+    return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+rx+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="'+sw+'"/>';
   }
-  function lf(label,sub,col,bg){
-    return '<div style="padding:6px 10px;background:'+bg+';border:1.5px solid '+col+'40;border-radius:6px;font-size:10px;color:'+col+';font-weight:700;max-width:160px;text-align:center;line-height:1.4;margin:2px;display:inline-block">'
-      +label+'<br><span style="font-weight:400;color:var(--ink-3)">'+sub+'</span></div>';
+  function tx(x,y,str,fs,fw,col,anchor){
+    return '<text x="'+x+'" y="'+y+'" text-anchor="'+(anchor||'middle')+'" font-size="'+fs+'" font-weight="'+(fw||600)+'" fill="'+(col||NK2)+'">'+str+'</text>';
   }
-  function lg(col,bg,label){
-    return '<div style="display:flex;align-items:center;gap:5px"><div style="width:12px;height:12px;border-radius:3px;background:'+bg+';border:1.5px solid '+col+'40"></div><span style="color:var(--ink-3);font-size:11px">'+label+'</span></div>';
-  }
-  function arr(){return '<div style="width:1px;height:12px;background:#9CA3AF;margin:0 auto"></div>';}
-  function row(content){return '<div style="display:flex;align-items:flex-start;justify-content:center;gap:8px;margin:4px 0">'+content+'</div>';}
-  function col(content,extra){return '<div style="display:flex;flex-direction:column;align-items:center;">'+(extra?extra:'')+'</div>';}
+  function vl(x,y1,y2,col,sw){return '<line x1="'+x+'" y1="'+y1+'" x2="'+x+'" y2="'+y2+'" stroke="'+(col||'#9CA3AF')+'" stroke-width="'+(sw||1.5)+'"/>';}
+  function hl(x1,x2,y,col,sw){return '<line x1="'+x1+'" y1="'+y+'" x2="'+x2+'" y2="'+y+'" stroke="'+(col||'#9CA3AF')+'" stroke-width="'+(sw||1.5)+'"/>';}
+  function ad(x,y1,y2,col){ col=col||'#9CA3AF';
+    return vl(x,y1,y2-7,col)+'<polygon points="'+x+','+y2+' '+(x-5)+','+(y2-8)+' '+(x+5)+','+(y2-8)+'" fill="'+col+'"/>';}
+  function ar(x1,x2,y,col){ col=col||'#9CA3AF';
+    return hl(x1,x2-7,y,col)+'<polygon points="'+x2+','+y+' '+(x2-8)+','+(y-5)+' '+(x2-8)+','+(y+5)+'" fill="'+col+'"/>';}
+  function al(x1,x2,y,col){ col=col||'#9CA3AF';
+    return hl(x2+7,x1,y,col)+'<polygon points="'+x2+','+y+' '+(x2+8)+','+(y-5)+' '+(x2+8)+','+(y+5)+'" fill="'+col+'"/>';}
+  /* question node: 300×44 centered */
+  function qn(cx,cy,w,code,lbl,fill,stroke){
+    return bx(cx,cy,w,44,8,fill,stroke)+tx(cx,cy-7,code,10.5,800,stroke)+tx(cx,cy+8,lbl,9.5,500,GRY);}
+  /* outcome node */
+  function on2(cx,cy,w,l1,l2,fill,stroke){
+    var h=l2?44:32;
+    return bx(cx,cy,w,h,6,fill,stroke)+tx(cx,l2?cy-8:cy+5,l1,10,700,stroke)+(l2?tx(cx,cy+9,l2,9,500,GRY):'');}
+  function el(x,y,str,col){return tx(x,y,str,9,700,col||GRY);}
 
-  var h='<div style="min-width:860px;font-family:Figtree,sans-serif">';
-  h+='<div style="font-size:11px;color:var(--ink-3);margin-bottom:12px">Lire de haut en bas. Chaque losange bleu = question de qualification. Les nœuds colorés = résultats finaux.</div>';
+  var h2='';
 
-  // ── START NODE
-  h+='<div style="text-align:center;margin-bottom:4px">';
-  h+='<div style="display:inline-block;background:#0D1117;color:#fff;padding:6px 18px;border-radius:4px;font-weight:700;font-size:11px;letter-spacing:.5px">NOUVEAU SINISTRE — DDE ou Incendie</div>';
-  h+=arr()+'</div>';
+  /* ── TITLE ── */
+  h2+=bx(CX,22,W,44,0,NK2,NK2)
+     +tx(CX,20,'ARBRE D\u00c9CISIONNEL — QUALIFICATION IRSI COMPL\u00c8TE',11,700,'#fff')
+     +tx(CX,35,'C1\u2013C4 conditions d\u2019entr\u00e9e  \u00b7  Q5\u2013Q11 d\u00e9signation AG  \u00b7  Tranches T1/T2',9,500,'rgba(255,255,255,.55)');
 
-  // ── C1
-  h+='<div style="text-align:center">'+nd('C1','Un assureur a-t-il notifi\u00e9 sa non-adh\u00e9sion IRSI ?','#E0E7FF',BLUE)+'</div>';
-  h+='<div style="display:flex;align-items:flex-start;justify-content:center;gap:40px;margin:2px 0">';
-  h+='<div style="text-align:center">'+lf('Oui','Hors IRSI — droit commun<br>Art. 1.5',KO,KNK)+'</div>';
-  h+='<div style="text-align:center"><div style="font-size:10px;color:'+OK+';font-weight:700">Non</div>'+arr()+'</div></div>';
+  /* ── LEGEND ── */
+  var lg=[[BLU,BB,'Conditions C1\u2013C4'],[PRP,PB,'D\u00e9signation Q5\u2013Q11'],[GRN,GB,'IRSI applicable'],[RED,RB,'Hors IRSI'],[ORG,OB,'Cas particulier']];
+  for(var i=0;i<lg.length;i++){
+    var lx=30+i*202;
+    h2+=bx(lx+7,74,14,14,3,lg[i][1],lg[i][0],1.5)+tx(lx+18,79,lg[i][2],9,600,lg[i][0],'start');}
 
-  // ── C2
-  h+='<div style="text-align:center;margin-left:80px">'+nd('C2','Origine dans l\u2019immeuble ou mitoyen ?','#E0E7FF',BLUE)+'</div>';
-  h+='<div style="display:flex;align-items:flex-start;justify-content:center;gap:30px;margin:2px 0;margin-left:80px">';
-  h+='<div>'+lf('Non','Hors IRSI<br>Origine ext\u00e9rieure',KO,KNK)+'</div>';
-  h+='<div style="text-align:center"><div style="font-size:10px;color:'+OK+';font-weight:700">Oui / Mitoyen / Inconnu</div>'+arr()+'</div></div>';
+  /* ── START ── */
+  h2+=bx(CX,110,250,32,16,NK2,NK2)+tx(CX,116,'NOUVEAU SINISTRE \u2014 DDE ou Incendie',11,700,'#fff');
 
-  // ── C3
-  h+='<div style="text-align:center;margin-left:140px">'+nd('C3','Cause express\u00e9ment exclue ?','#E0E7FF',BLUE)+'</div>';
-  h+='<div style="display:flex;justify-content:center;gap:30px;margin:2px 0;margin-left:140px">';
-  h+='<div>'+lf('Oui (ou pluralit\u00e9 dont une exclue)','Hors IRSI — Art. 1.1.1',KO,KNK)+'</div>';
-  h+='<div style="text-align:center"><div style="font-size:10px;color:'+OK+';font-weight:700">Non / Ind\u00e9termin\u00e9e</div>'+arr()+'</div></div>';
+  /* ── MAIN CHAIN: each node at dy=83 apart, outcomes at same y on sides ── */
+  var dy=83; // vertical step
 
-  // ── C4
-  h+='<div style="text-align:center;margin-left:200px">'+nd('C4','Type de local sinistri\u00e9 ?','#E0E7FF',BLUE)+'</div>';
-  h+='<div style="display:flex;justify-content:center;gap:14px;margin:2px 0;margin-left:200px">';
-  h+='<div>'+lf('H\u00f4tel / Ch. d\u2019h\u00f4tes','Hors IRSI — toutes tranches',KO,KNK)+'</div>';
-  h+='<div>'+lf('Local pro/mixte partie pro','Hors IRSI si T2<br>IRSI en T1',WARN,PNK)+'</div>';
-  h+='<div style="text-align:center"><div style="font-size:10px;color:'+OK+';font-weight:700">Habitation</div>'+arr()+'</div></div>';
+  // C1 y=185
+  var y=185;
+  h2+=ad(CX,126,y-22)+qn(CX,y,300,'C1','Un assureur a notifi\u00e9 sa non-adh\u00e9sion IRSI ?',BB,BLU);
+  h2+=ar(CX+150,RX-70,y,RED)+el((CX+150+RX-70)/2-8,y-8,'Oui',RED)+on2(RX,y,140,'Hors IRSI','Art. 1.5',RB,RED);
+  h2+=el(CX+6,y+32,'Non',GRN);
 
-  // ── Q4b
-  h+='<div style="text-align:center;margin-left:280px">'+nd('Q4b','Plusieurs locaux sinistr\u00e9s ?','#FEF9C3','#854D0E')+'</div>';
-  h+='<div style="display:flex;justify-content:center;gap:14px;margin:2px 0;margin-left:280px">';
-  h+='<div>'+lf('Oui','Tableau multi-lots<br>AG par lot — Art. 7.2.3',BLUE,BNK)+'</div>';
-  h+='<div style="text-align:center"><div style="font-size:10px;color:'+OK+';font-weight:700">Non — 1 local</div>'+arr()+'</div></div>';
+  // C2 y=268
+  y+=dy; var c2y=y;
+  h2+=ad(CX,207,y-22,GRN)+qn(CX,y,300,'C2','Origine dans l\u2019immeuble ou mitoyen ?',BB,BLU);
+  h2+=ar(CX+150,RX-70,y,RED)+el((CX+150+RX-70)/2-8,y-8,'Ext\u00e9rieur',RED)+on2(RX,y,140,'Hors IRSI','Origine ext.',RB,RED);
+  h2+=al(CX-150,LX+65,y,ORG)+el((CX-150+LX+65)/2,y-8,'Mitoyen',ORG)+on2(LX,y,130,'V\u00e9rif. C1 \u00e9tendu','Ass. mitoyen',OB,ORG);
+  h2+=el(CX+6,y+32,'Oui / Inconnu',GRN);
 
-  // ── Q5
-  h+='<div style="text-align:center;margin-left:340px">'+nd('Q5','Local endommag\u00e9 = PC ou privatif ?','#F3E8FF','#6B21A8')+'</div>';
-  h+='<div style="display:flex;justify-content:center;gap:14px;margin:2px 0;margin-left:340px">';
-  h+='<div>'+lf('Parties communes','AG = Assureur immeuble<br>Art. 2.1.1',OK,NK)+'</div>';
-  h+='<div style="text-align:center"><div style="font-size:10px;color:'+OK+';font-weight:700">Privatif</div>'+arr()+'</div></div>';
+  // C3 y=351
+  y+=dy;
+  h2+=ad(CX,c2y+22,y-22,GRN)+qn(CX,y,300,'C3','Cause express\u00e9ment exclue ?',BB,BLU);
+  h2+=ar(CX+150,RX-70,y,RED)+el((CX+150+RX-70)/2-8,y-8,'Oui / Pluralit\u00e9',RED)+on2(RX,y,140,'Hors IRSI','Art. 1.1.1',RB,RED);
+  h2+=el(CX+6,y+32,'Non / Ind\u00e9t.',GRN);
 
-  // ── Q6
-  h+='<div style="text-align:center;margin-left:400px">'+nd('Q6','Occupation au jour du sinistre ?','#F3E8FF','#6B21A8')+'</div>';
-  h+='<div style="display:flex;justify-content:center;gap:14px;margin:2px 0;margin-left:400px">';
-  h+='<div>'+lf('Meuble / Vacant / Conge','Assureur CNO<br>ou immeuble (sub.)',WARN,PNK)+'</div>';
-  h+='<div style="text-align:center"><div style="font-size:10px;color:'+OK+';font-weight:700">Normale</div>'+arr()+'</div></div>';
+  // C4 y=434
+  y+=dy;var c3y=y-dy,c4y=y;
+  h2+=ad(CX,c3y+22,y-22,GRN)+qn(CX,y,300,'C4','Type de local sinistri\u00e9 ?',BB,BLU);
+  h2+=ar(CX+150,RX-70,y,RED)+el((CX+150+RX-70)/2-8,y-8,'H\u00f4tel',RED)+on2(RX,y,140,'Hors IRSI','toutes tranches',RB,RED);
+  h2+=al(CX-150,LX+65,y,ORG)+el((CX-150+LX+65)/2,y-8,'Pro/Mixte',ORG)+on2(LX,y,130,'Hors IRSI si T2','IRSI en T1',OB,ORG);
+  h2+=el(CX+6,y+32,'Habitation',GRN);
 
-  // ── Q7
-  h+='<div style="text-align:center;margin-left:460px">'+nd('Q7','Qualit\u00e9 de l\u2019occupant ?','#F3E8FF','#6B21A8')+'</div>';
-  h+='<div style="display:flex;justify-content:center;gap:14px;margin:2px 0;margin-left:460px">';
-  h+='<div>'+lf('Copropri\u00e9taire','V\u00e9rif. auto-dommage<br>→ Q8',WARN,PNK)+'</div>';
-  h+='<div style="text-align:center"><div style="font-size:10px;color:'+OK+';font-weight:700">Locataire / autre</div>'+arr()+'</div></div>';
+  // Q4b y=517
+  y+=dy;
+  h2+=ad(CX,c4y+22,y-22,GRN)+qn(CX,y,300,'Q4b','Plusieurs locaux sinistr\u00e9s ?',PB,PRP);
+  h2+=al(CX-150,LX+65,y,BLU)+el((CX-150+LX+65)/2,y-8,'Oui',BLU)+on2(LX,y,130,'Multi-lots','AG par lot',BB,BLU);
+  h2+=el(CX+6,y+32,'Non',GRN);
 
-  // ── Q8
-  h+='<div style="text-align:center;margin-left:520px">'+nd('Q8','Occupant assur\u00e9 ? (Art. 1.1.5)','#F3E8FF','#6B21A8')+'</div>';
-  h+='<div style="display:flex;justify-content:center;gap:14px;margin:2px 0;margin-left:520px">';
-  h+='<div>'+lf('Oui','AG = Assureur occupant<br>Cas 3',OK,NK)+'</div>';
-  h+='<div style="text-align:center"><div style="font-size:10px;color:WARN;font-weight:700">Non</div>'+arr()+'</div></div>';
+  // Q5 y=600
+  y+=dy;var q4by=y-dy;
+  h2+=ad(CX,q4by+22,y-22,GRN)+qn(CX,y,300,'Q5','Local endommag\u00e9 = Parties Communes ou Privatif ?',PB,PRP);
+  h2+=al(CX-150,LX+65,y,GRN)+el((CX-150+LX+65)/2,y-8,'PC',GRN)+on2(LX,y,130,'AG = Ass. immeuble','Art. 2.1.1',GB,GRN);
+  h2+=el(CX+6,y+32,'Privatif',GRN);
 
-  // ── Q9
-  h+='<div style="text-align:center;margin-left:580px">'+nd('Q9','CNO assur\u00e9 ?','#F3E8FF','#6B21A8')+'</div>';
-  h+='<div style="display:flex;justify-content:center;gap:14px;margin:2px 0;margin-left:580px">';
-  h+='<div>'+lf('Oui','AG = Assureur CNO<br>Cas 4/6/8',OK,NK)+'</div>';
-  h+='<div>'+lf('Non','AG = Ass. immeuble<br>Subsidiarit\u00e9',BLUE,BNK)+'</div>';
-  h+='</div>';
+  // Q6 y=683
+  y+=dy;var q5y=y-dy;
+  h2+=ad(CX,q5y+22,y-22,GRN)+qn(CX,y,300,'Q6','Occupation au jour du sinistre ?',PB,PRP);
+  h2+=ar(CX+150,RX-70,y,ORG)+el((CX+150+RX-70)/2-8,y-8,'Meuble/Vacant/Cong\u00e9',ORG)+on2(RX,y,140,'\u2192 Q9','CNO assur\u00e9 ?',OB,ORG);
+  h2+=el(CX+6,y+32,'Normale',GRN);
 
-  // ── POST-AG (Q10/Q11)
-  h+='<div style="margin-top:18px;border-top:2px dashed #E5E5E3;padding-top:14px">';
-  h+='<div style="font-size:11px;color:var(--ink-3);margin-bottom:10px;font-weight:600">Apres d\u00e9signation de l\u2019AG — v\u00e9rifications post-qualification :</div>';
-  h+='<div style="display:flex;gap:16px;flex-wrap:wrap">';
-  h+='<div>'+nd('Q10','Sinistre r\u00e9p\u00e9titif < 24 mois ?','#FEF9C3','#854D0E');
-  h+='<div style="display:flex;gap:8px">'+lf('Oui','Recours T1 possible<br>Art. 7.1.2',WARN,PNK)+lf('Non','Abandon recours T1<br>Flux standard',OK,NK)+'</div></div>';
-  h+='<div>'+nd('Q11','Aggravation en cours ?','#FEF9C3','#854D0E');
-  h+='<div style="display:flex;gap:8px">'+lf('Oui','Alerte urgence<br>Titre 8',KO,KNK)+lf('Non','Continuer flux normal','',OK,NK)+'</div></div>';
-  h+='<div style="padding:10px 14px;background:var(--forest-pale);border-radius:8px;border:1px solid rgba(26,92,64,.15);font-size:11.5px;line-height:1.7">';
-  h+='<strong>R\u00e9sultats possibles :</strong><br>';
-  h+='Tranche T1 (\u2264 1600\u20ac) : abandon de recours<br>';
-  h+='Tranche T2 (1600\u20e0\u20135000\u20ac) : expertise + recours<br>';
-  h+='Hors IRSI (&gt; 5000\u20ac) : droit commun</div></div></div>';
+  // Q7 y=766
+  y+=dy;var q6y=y-dy;
+  h2+=ad(CX,q6y+22,y-22,GRN)+qn(CX,y,300,'Q7','Qualit\u00e9 de l\u2019occupant ?',PB,PRP);
+  h2+=al(CX-150,LX+65,y,ORG)+el((CX-150+LX+65)/2,y-8,'Copropri\u00e9taire',ORG)+on2(LX,y,130,'V\u00e9rif. auto-dommage','\u2192 Q8',OB,ORG);
+  h2+=el(CX+6,y+32,'Locataire / autre',GRN);
 
-  // ── LEGEND
-  h+='<div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">';
-  h+=lg(OK,NK,'R\u00e9sultat positif / IRSI applicable');
-  h+=lg(KO,KNK,'Hors IRSI — sortie de convention');
-  h+=lg(WARN,PNK,'Avertissement / cas particulier');
-  h+=lg(BLUE,BNK,'Information compl\u00e9mentaire');
-  h+=lg('#1D4ED8','#E0E7FF','Question de qualification (C1\u2013C4, Q5\u2013Q11)');
-  h+='</div>';
+  // Q8 y=849
+  y+=dy;var q7y=y-dy;
+  h2+=ad(CX,q7y+22,y-22,GRN)+qn(CX,y,300,'Q8','Occupant assur\u00e9 ? (Art. 1.1.5)',PB,PRP);
+  h2+=ar(CX+150,RX-70,y,GRN)+el((CX+150+RX-70)/2-8,y-8,'Oui',GRN)+on2(RX,y,140,'AG = Ass. occupant','Cas 3',GB,GRN);
+  h2+=el(CX+6,y+32,'Non assur\u00e9',ORG);
 
-  h+='</div>';
-  c.innerHTML=h;
+  // Q9 y=932
+  y+=dy;var q8y=y-dy;
+  h2+=ad(CX,q8y+22,y-22,ORG)+qn(CX,y,300,'Q9','CNO assur\u00e9 ?',PB,PRP);
+  h2+=al(CX-150,LX+65,y,GRN)+el((CX-150+LX+65)/2,y-8,'Oui',GRN)+on2(LX,y,130,'AG = Ass. CNO','Cas 4/6/8',GB,GRN);
+  h2+=ar(CX+150,RX-70,y,BLU)+el((CX+150+RX-70)/2-8,y-8,'Non',BLU)+on2(RX,y,140,'AG = Ass. immeuble','Subsidiarit\u00e9',BB,BLU);
+  var q9y=y;
+
+  /* ── SEPARATOR ── */
+  var sepY=q9y+66;
+  h2+=ad(CX,q9y+22,sepY-4)+hl(70,W-70,sepY,YK,1)+bx(CX,sepY+14,360,24,4,YB,YK,1)
+     +tx(CX,sepY+20,'V\u00c9RIFICATIONS POST-D\u00c9SIGNATION AG',9,800,GRY);
+
+  /* ── Q10 & Q11: spaced at CX±220 to avoid outcome overlap ──
+     Q10 at cx=310 → outcomes at 240 (w=120) and 380 (w=120): 180-300 and 320-440 → gap=20px (ok)
+     Q11 at cx=750 → outcomes at 680 and 820: 620-740 and 760-880 → gap=20px (ok)
+  */
+  var pY=sepY+76;
+  var Q10x=CX-220,Q11x=CX+220; // 310, 750
+  // branch arrows
+  h2+=vl(CX,sepY+26,sepY+46,YK,1)+hl(Q10x,Q11x,sepY+46,YK,1);
+  h2+=ad(Q10x,sepY+46,pY-22,GRY)+ad(Q11x,sepY+46,pY-22,GRY);
+
+  // Q10 node
+  h2+=qn(Q10x,pY,200,'Q10','R\u00e9p\u00e9titif < 24 mois ?',OB,'#B45309');
+  // Q10 outcomes — placed vertically below, spread left/right
+  var pY2=pY+86;
+  var q10a=Q10x-65, q10b=Q10x+65; // 245, 375 — w=120 each → 185-305 and 315-435 ✓
+  h2+=hl(q10a,q10b,pY+22,YK,1)+ad(q10a,pY+22,pY2-16,ORG)+ad(q10b,pY+22,pY2-16,GRN);
+  h2+=el(q10a-8,pY+40,'Oui',ORG)+el(q10b+8,pY+40,'Non',GRN);
+  h2+=on2(q10a,pY2,120,'Recours T1','Art. 7.1.2',OB,ORG);
+  h2+=on2(q10b,pY2,120,'Abandon recours',null,GB,GRN);
+
+  // Q11 node
+  h2+=qn(Q11x,pY,200,'Q11','Aggravation en cours ?',OB,'#B45309');
+  var q11a=Q11x-65, q11b=Q11x+65; // 685, 815 — w=120 each → 625-745 and 755-875 ✓
+  h2+=hl(q11a,q11b,pY+22,YK,1)+ad(q11a,pY+22,pY2-16,RED)+ad(q11b,pY+22,pY2-16,GRN);
+  h2+=el(q11a-8,pY+40,'Oui',RED)+el(q11b+8,pY+40,'Non',GRN);
+  h2+=on2(q11a,pY2,120,'Urgence','Titre 8 Convention',RB,RED);
+  h2+=on2(q11b,pY2,120,'Flux normal',null,GB,GRN);
+
+  /* ── TRANCHES ── */
+  var trY=pY2+88;
+  h2+=tx(CX,trY-24,'R\u00c9SULTAT SELON L\u2019ASSIETTE PAR LOCAL',9.5,800,GRY);
+  // T1: cx=CX-310=220, w=220 → 110-330
+  h2+=bx(CX-310,trY,220,64,8,GB,GRN,1.5)
+     +tx(CX-310,trY-17,'Tranche T1',11,800,GRN)
+     +tx(CX-310,trY-3,'Assiette \u2264 1\u202f600\u202f\u20ac HT',9.5,600,GRN)
+     +tx(CX-310,trY+12,'Abandon de recours',9,500,GRY)
+     +tx(CX-310,trY+25,'Objectif 30 jours',8.5,400,GRY);
+  // T2: cx=CX=530, w=220 → 420-640
+  h2+=bx(CX,trY,220,64,8,OB,'#B45309',1.5)
+     +tx(CX,trY-17,'Tranche T2',11,800,'#92400E')
+     +tx(CX,trY-3,'1\u202f600\u202f\u20ac < Assiette \u2264 5\u202f000\u202f\u20ac',9.5,600,'#92400E')
+     +tx(CX,trY+12,'Expertise + recours',9,500,GRY)
+     +tx(CX,trY+25,'Rapport opposable',8.5,400,GRY);
+  // Hors: cx=CX+310=840, w=220 → 730-950
+  h2+=bx(CX+310,trY,220,64,8,RB,RED,1.5)
+     +tx(CX+310,trY-17,'Hors Convention',11,800,RED)
+     +tx(CX+310,trY-3,'Assiette > 5\u202f000\u202f\u20ac HT',9.5,600,RED)
+     +tx(CX+310,trY+12,'Expertise contradictoire',9,500,GRY)
+     +tx(CX+310,trY+25,'Droit commun',8.5,400,GRY);
+
+  /* ── PRESCRIPTIONS ── */
+  var nY=trY+104;
+  h2+=bx(CX,nY,W-40,62,8,YB,YK,1)
+     +tx(CX,nY-17,'D\u00c9LAIS \u0026 PRESCRIPTIONS',9,800,GRY)
+     +tx(CX,nY-4,'D\u00e9claration syndic J+5 \u00b7 R\u00e9ponse LRAR expert J+10 \u00b7 RDF Art. 3.4 : sans d\u00e9lai',9.5,600,'#374151')
+     +tx(CX,nY+10,'Prescription remboursement Art. 9 : 2 ans \u00b7 Prescription r\u00e9cup\u00e9ration Art. 10 : 2 ans',9.5,600,'#374151')
+     +tx(CX,nY+24,'Litiges entre assureurs \u2192 CORAL (GCA) obligatoire avant tout recours judiciaire',9,500,GRY);
+
+  s+=h2+'</svg>';
+  c.innerHTML=s;
 }
-function node(id,label,bg,col){
-  return `<div style="display:inline-flex;flex-direction:column;align-items:center;gap:0">
-    <div style="padding:6px 12px;background:${bg};color:${col};border:1.5px solid ${col}40;border-radius:6px;font-weight:700;font-size:10.5px;max-width:200px;text-align:center;line-height:1.4">${id}<br><span style="font-weight:400;font-size:10px">${label}</span></div>
-    <div style="width:1px;height:12px;background:#9CA3AF"></div>
-  </div>`;
-}
-function leaf(id,label,sub,col,bg){
-  return `<div style="padding:6px 10px;background:${bg};border:1.5px solid ${col}40;border-radius:6px;font-size:10px;color:${col};font-weight:700;max-width:160px;text-align:center;line-height:1.4;margin:2px">${label}<br><span style="font-weight:400;color:var(--ink-3)">${sub}</span></div>`;
-}
-function arrow(dir){ return `<span style="color:#9CA3AF;font-size:12px">${dir==='right'?'→':'↓'}</span>`; }
-function legend(col,bg,label){ return `<div style="display:flex;align-items:center;gap:5px"><div style="width:12px;height:12px;border-radius:3px;background:${bg};border:1.5px solid ${col}40"></div><span style="color:var(--ink-3)">${label}</span></div>`; }
-
 // ════════════════════ INFO PANELS ════════════════════
 function toggleInfo(id){
   const p=document.getElementById(id);if(!p)return;
