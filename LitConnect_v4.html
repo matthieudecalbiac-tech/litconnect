@@ -1651,6 +1651,70 @@ td { border-bottom: 1px solid #F0EFEC !important; color: var(--ink-2) !important
 
 /* ══ PREMIUM ══ */
 body{background:#F4F3F0!important;background-image:none!important;}
+
+/* ══ WIZARD PREMIUM VISUAL ══ */
+.wiz-steps{background:#fff!important;border:1px solid #E5E5E3!important;border-radius:10px!important;padding:14px 20px!important;box-shadow:var(--sd1)!important;}
+.ws-n{width:28px!important;height:28px!important;font-size:11px!important;font-weight:800!important;font-family:'Martian Mono',monospace!important;}
+.ws.on .ws-n{background:#111118!important;color:#fff!important;box-shadow:none!important;}
+.ws.done .ws-n{background:#166534!important;color:#fff!important;box-shadow:none!important;}
+.ws-l{font-size:11px!important;font-weight:700!important;letter-spacing:.2px!important;}
+.ws-sep{height:1px!important;background:#E5E5E3!important;}
+.ws-sep.done{background:#166534!important;}
+.wcard{background:#fff!important;border:1px solid #E5E5E3!important;box-shadow:var(--sd2)!important;padding:28px 32px!important;}
+.flabel{font-size:14px!important;font-weight:700!important;color:var(--ink)!important;letter-spacing:-.1px!important;line-height:1.45!important;}
+.info-btn{font-size:10.5px!important;font-weight:700!important;padding:4px 10px!important;border-radius:20px!important;border:1.5px solid #E5E5E3!important;background:#fff!important;color:var(--ink-3)!important;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all .15s;}
+.info-btn:hover{border-color:#C4973A!important;color:#8B6914!important;background:#FBF6E9!important;}
+.info-panel{background:#FAFAF8!important;border:1px solid #E5E5E3!important;border-radius:9px!important;padding:16px 18px!important;margin-bottom:12px!important;}
+.ip-title{font-size:11px!important;font-weight:800!important;color:var(--ink)!important;text-transform:uppercase!important;letter-spacing:.6px!important;margin-bottom:10px!important;}
+.ip-body{font-size:12.5px!important;line-height:1.72!important;color:var(--ink-2)!important;}
+.ip-hl{margin-top:10px!important;padding:9px 12px!important;background:#FBF6E9!important;border-radius:7px!important;border:1px solid rgba(196,151,58,.2)!important;font-size:12px!important;color:#8B6914!important;font-weight:600!important;}
+.yn{padding:16px 14px!important;border-radius:9px!important;border:1.5px solid #E5E5E3!important;background:#fff!important;transition:all .15s!important;}
+.yn:hover{border-color:#C4973A!important;background:#FBF6E9!important;transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.06);}
+.yn.on{border-color:#C4973A!important;background:#FBF6E9!important;box-shadow:0 0 0 3px rgba(196,151,58,.12)!important;}
+.yn-oui.on{border-color:#166534!important;background:#F0FDF4!important;box-shadow:0 0 0 3px rgba(22,101,52,.1)!important;}
+.yn-non.on{border-color:#991B1B!important;background:#FEF2F2!important;box-shadow:0 0 0 3px rgba(153,27,27,.1)!important;}
+.yn-lbl{font-size:13px!important;font-weight:700!important;color:var(--ink)!important;}
+.yn-sub{font-size:11px!important;color:var(--ink-3)!important;margin-top:4px!important;}
+.rc{border:1.5px solid #E5E5E3!important;border-radius:9px!important;padding:14px 16px!important;background:#fff!important;transition:all .15s!important;}
+.rc:hover{border-color:#C4973A!important;background:#FBF6E9!important;transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.06);}
+.rc.on{border-color:#C4973A!important;background:#FBF6E9!important;box-shadow:0 0 0 3px rgba(196,151,58,.1)!important;}
+.rc-title{font-size:13.5px!important;font-weight:700!important;color:var(--ink)!important;}
+.rc-sub{font-size:11.5px!important;color:var(--ink-3)!important;margin-top:3px!important;}
+.irsi-title{font-family:'Cormorant',serif!important;font-size:18px!important;font-weight:700!important;letter-spacing:-.2px!important;}
+.irsi-ag-box{margin-top:12px!important;padding:10px 14px!important;background:#fff!important;border:1px solid #D1D5DB!important;border-radius:7px!important;font-size:13px!important;font-weight:600!important;}
+/* Q number chips */
+.q-chip{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#111118;color:#fff;font-size:10px;font-weight:800;font-family:'Martian Mono',monospace;flex-shrink:0;margin-right:8px;}
+.q-chip.c-cond{background:#1D4ED8;}
+.q-chip.c-ok{background:#166534;}
+/* Question block with left accent */
+.q-block{padding:16px 18px;background:#fff;border:1px solid #E5E5E3;border-radius:10px;border-left:3px solid #E5E5E3;margin-bottom:12px;transition:border-left-color .2s;}
+.q-block.active{border-left-color:#C4973A;box-shadow:0 2px 12px rgba(196,151,58,.08);}
+.q-block.answered{border-left-color:#166534;background:#FAFAF8;}
+/* Answer trail */
+.answer-trail{display:flex;flex-direction:column;gap:5px;margin-bottom:14px;padding:12px 16px;background:#F9F9F8;border:1px solid #E5E5E3;border-radius:9px;}
+.trail-row{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--ink-3);}
+.trail-q{font-weight:700;color:var(--ink-2);min-width:70px;}
+.trail-a{padding:1px 7px;border-radius:20px;font-size:10.5px;font-weight:700;}
+.trail-a.ok{background:#F0FDF4;color:#166534;}
+.trail-a.ko{background:#FEF2F2;color:#991B1B;}
+.trail-a.warn{background:#FBF6E9;color:#8B6914;}
+
+/* ── MODÈLES DE COMMUNICATION ── */
+.model-block{animation:fadeUp .18s ease;}
+.model-text{
+  font-family:'Martian Mono',monospace;
+  font-size:11.5px;line-height:1.75;
+  color:var(--ink-2);
+  background:#F9F9F8;
+  border:1px solid #E5E5E3;
+  border-radius:9px;
+  padding:18px 20px;
+  white-space:pre-wrap;
+  word-break:break-word;
+  margin:0;
+  max-height:480px;
+  overflow-y:auto;
+}
 .sb{background:#0D1117!important;border-right:1px solid rgba(255,255,255,.05)!important;}
 .sb::before{background:radial-gradient(ellipse at 15% 0%,rgba(196,151,58,.1) 0%,transparent 55%)!important;}
 .sb-logo-mark{font-size:21px!important;font-weight:700!important;color:#fff!important;letter-spacing:-.5px!important;}
@@ -2655,6 +2719,17 @@ td{border-bottom:1px solid #F0EFEC!important;color:var(--ink-2)!important;font-s
       <h2>Qualification IRSI</h2>
       <p class="wsub">Répondez à chaque question pour vérifier l'éligibilité à la Convention IRSI et désigner l'assureur gestionnaire. Si vous ne savez pas encore, répondez <em>"Je ne sais pas"</em> : un item en attente sera créé dans la checklist.</p>
 
+      <!-- Answer trail — filled dynamically -->
+      <div id="answer-trail" style="display:none" class="answer-trail"></div>
+
+      <!-- Progress indicator -->
+      <div id="q-progress" style="display:flex;align-items:center;gap:8px;margin-bottom:20px;font-size:11.5px;color:var(--ink-3)">
+        <div style="flex:1;height:3px;background:#F0EFEC;border-radius:2px;overflow:hidden">
+          <div id="q-progress-fill" style="height:100%;background:linear-gradient(90deg,#166534,#C4973A);border-radius:2px;transition:width .4s ease;width:0%"></div>
+        </div>
+        <span id="q-progress-label" style="white-space:nowrap;font-weight:600">Étape 1 / 11</span>
+      </div>
+
       <div id="q1z" class="fg">
         <div class="fg-lbl-row">
           <label class="flabel">C1 — Avez-vous reçu une notification d'un assureur indiquant qu'il <u>ne pratique pas</u> la Convention IRSI ? <span class="req">*</span></label>
@@ -2689,13 +2764,18 @@ td{border-bottom:1px solid #F0EFEC!important;color:var(--ink-2)!important;font-s
         </div>
         <div class="info-panel" id="ip2">
           <div class="ip-title">Origine du sinistre — condition géographique C2</div>
-          <div class="ip-body">L'IRSI couvre les sinistres dont la <strong>source est dans l'immeuble</strong> ou un bâtiment directement adjacent. Un sinistre venant de la voirie, d'un réseau public ou d'une propriété non voisine est hors convention. <strong>Si la cause est inconnue</strong>, répondez Oui — l'IRSI reste applicable tant que la cause n'est pas identifiée.</div>
+          <div class="ip-body">L'IRSI couvre les sinistres dont la <strong>source est dans l'immeuble</strong> ou un bâtiment directement adjacent. Un sinistre venant de la voirie, d'un réseau public ou d'une propriété non voisine est hors convention. <strong>Si la cause est inconnue</strong>, répondez Oui — l'IRSI reste applicable tant que la cause n'est pas identifiée.<br><br>
+          <strong>Attention — immeuble mitoyen :</strong> si l'origine est dans un immeuble voisin, l'assureur de ce local doit lui aussi adhérer à l'IRSI (condition C1 étendue). Si ce n'est pas le cas → hors IRSI, recours droit commun.</div>
           <div class="ip-hl"><strong>Ce qu'on attend :</strong> La source du sinistre (canalisation, toiture, structure) appartient-elle à cet immeuble ou à un bâtiment directement adjacent ?</div>
         </div>
-        <div class="ynu" style="margin-top:8px">
-          <button class="yn yn-oui" id="q2-o" onclick="ansQ(2,true)"><span class="yn-lbl">Oui</span><span class="yn-sub">Origine dans l'immeuble</span></button>
-          <button class="yn yn-non" id="q2-n" onclick="ansQ(2,false)"><span class="yn-lbl">Non</span><span class="yn-sub">Origine extérieure → Hors IRSI</span></button>
-          <button class="yn yn-unk" id="q2-u" onclick="ansQ(2,'unk')"><span class="yn-lbl">Je ne sais pas</span><span class="yn-sub">Cause inconnue → IRSI par défaut</span></button>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin-top:8px">
+          <button class="yn yn-oui" id="q2-o" onclick="ansQ(2,true)"><span class="yn-lbl">Oui — dans l'immeuble</span><span class="yn-sub">Flux standard</span></button>
+          <button class="yn" id="q2-mit" onclick="ansQ2mitoyen()" style="border-color:var(--cognac-mid)"><span class="yn-lbl">Immeuble mitoyen</span><span class="yn-sub">Vérif. C1 étendue requise</span></button>
+          <button class="yn yn-non" id="q2-n" onclick="ansQ(2,false)"><span class="yn-lbl">Non — extérieur</span><span class="yn-sub">Hors IRSI</span></button>
+          <button class="yn yn-unk" id="q2-u" onclick="ansQ(2,'unk')"><span class="yn-lbl">Je ne sais pas</span><span class="yn-sub">IRSI par défaut</span></button>
+        </div>
+        <div id="q2-mitoyen-warn" style="display:none;margin-top:8px;padding:10px 13px;background:var(--cognac-pale);border:1.5px solid rgba(160,92,20,.2);border-radius:8px;font-size:12.5px;line-height:1.65">
+          <strong>Immeuble mitoyen :</strong> vérifiez que l'assureur du local responsable dans cet immeuble adjacent adhère à l'IRSI (condition C1 étendue). Si son assureur n'adhère pas → hors convention, recours en droit commun uniquement. Si adhérent → continuez, l'IRSI s'applique normalement.
         </div>
       </div>
       <div id="q3z" style="display:none" class="fg">
@@ -2741,7 +2821,18 @@ td{border-bottom:1px solid #F0EFEC!important;color:var(--ink-2)!important;font-s
           <label class="rc" id="rc-pro" onclick="selRC('rc-pro','rc-hab','rc-hotel');ansQ(4,'pro')"><input type="radio" name="ltype4"><div><div class="rc-title">Local pro ou mixte</div><div class="rc-sub">Commerce, bureau, local mixte habitation/pro. Couvert en T1, exclu en T2.</div></div></label>
           <label class="rc" id="rc-hotel" onclick="selRC('rc-hotel','rc-hab','rc-pro');ansQ(4,'hotel')"><input type="radio" name="ltype4"><div><div class="rc-title">Hôtel / Ch. d'hôtes</div><div class="rc-sub">Toujours exclu — toutes tranches.</div></div></label>
         </div>
-        <div id="c4-pro-warn" class="wiz-ctx wiz-warn" style="display:none"><strong>Local professionnel ou mixte :</strong> si le montant des dommages dépasse 1 600 € HT (Tranche 2), ce dossier sera automatiquement hors Convention IRSI. Vous serez alerté si l'expertise constate un dépassement.</div>
+        <div id="c4-pro-warn" class="wiz-ctx wiz-warn" style="display:none"><strong>Local professionnel ou mixte :</strong> si le montant des dommages dépasse 1 600 € HT (T2), ce dossier sera hors Convention IRSI.</div>
+        <!-- Q_mixte : si local mixte, quelle partie est sinistrée ? -->
+        <div id="q4-mixte-z" style="display:none;margin-top:10px;padding:12px 14px;background:var(--ivory);border:1.5px solid rgba(160,92,20,.15);border-radius:8px;font-size:12.5px">
+          <div style="font-weight:700;margin-bottom:8px;color:var(--ink)">Local mixte — le sinistre prend naissance dans quelle partie ?</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <button class="yn yn-oui" id="qmix-hab" onclick="selMixte('hab')"><span class="yn-lbl">Partie habitation</span><span class="yn-sub">IRSI applicable T1 et T2</span></button>
+            <button class="yn" id="qmix-pro" onclick="selMixte('pro')" style="border-color:var(--cognac-mid)"><span class="yn-lbl">Partie professionnelle</span><span class="yn-sub">Hors IRSI si T2</span></button>
+          </div>
+          <div id="qmix-pro-warn" style="display:none;margin-top:8px;padding:8px 11px;background:var(--crimson-pale);border-radius:6px;font-size:12px;color:var(--crimson-mid)">
+            Si le montant dépasse 1 600 € HT → hors IRSI (Art. 1.1.2 — locaux mixtes partie pro exclus en T2). Un item d'alerte sera ajouté à la checklist.
+          </div>
+        </div>
       </div>
 
       <!-- Q4b — Multi-local -->
@@ -2925,6 +3016,54 @@ td{border-bottom:1px solid #F0EFEC!important;color:var(--ink-2)!important;font-s
           <label class="rc" id="rc-priv" onclick="selRC('rc-priv','rc-com');selLocal('priv')"><input type="radio" name="ltype"><div><div class="rc-title">Local privatif (appartement endommagé)</div><div class="rc-sub">Le local qui a subi les dégâts — pas celui d'où vient la cause</div></div></label>
         </div>
       </div>
+      <!-- Q_rdf — Qui a organisé la RDF (règle juillet 2020) -->
+      <div id="q_rdfz" style="display:none" class="fg">
+        <div class="fg-lbl-row">
+          <label class="flabel">Qui a organisé la recherche de fuite (RDF) ? <span class="req">*</span></label>
+          <span class="info-btn" onclick="toggleInfo('ip_rdf')">ℹ Règle 2020 — qui paye ?</span>
+        </div>
+        <div class="info-panel" id="ip_rdf">
+          <div class="ip-title">RDF — Réforme février 2020 (applicable depuis juillet 2020)</div>
+          <div class="ip-body">
+            Depuis juillet 2020, l'organisation de la RDF ne revient plus nécessairement à l'AG. Les règles sont :<br><br>
+            <strong>Assureur de l'occupant</strong> → organise la RDF dans le local de son assuré.<br>
+            <strong>Assureur du CNO</strong> → organise si RDF destructive, local vacant/meublé/saisonnier, congé au jour du sinistre, non-assurance de l'occupant.<br>
+            <strong>Assureur de l'immeuble</strong> → organise pour les parties communes + subsidiarité si copropriétaire non assuré.<br><br>
+            <strong>Exception copropriété :</strong> si le <em>syndic</em> a organisé la RDF et que la fuite vient d'un lot privatif, c'est l'assureur du copropriétaire (occupant ou CNO) qui prend en charge — même s'il n'est pas responsable conventionnellement.<br><br>
+            Seuls les frais de RDF indemnisés par l'AG entrent dans l'assiette T1/T2.
+          </div>
+          <div class="ip-hl"><strong>Ce qu'on attend :</strong> Qui a mandaté le plombier ou le bureau de recherche de fuite ?</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:8px">
+          <button class="yn" id="qrdf-syndic" onclick="selRDF('syndic')"><span class="yn-lbl">Le syndic</span><span class="yn-sub">Prise en charge : assureur du copropriétaire propriétaire du local source</span></button>
+          <button class="yn yn-oui" id="qrdf-ag" onclick="selRDF('ag')"><span class="yn-lbl">L'assureur gestionnaire (AG)</span><span class="yn-sub">Frais intégrés dans l'assiette</span></button>
+          <button class="yn" id="qrdf-occ" onclick="selRDF('occ')"><span class="yn-lbl">L'occupant / copropriétaire</span><span class="yn-sub">Remboursement par son assureur si > 1 600 €</span></button>
+        </div>
+        <div id="qrdf-result" style="display:none;margin-top:10px;padding:9px 12px;border-radius:7px;font-size:12px;line-height:1.6"></div>
+        <div style="margin-top:10px"><button class="btn btn-out btn-sm" onclick="show('q6z')">Continuer →</button></div>
+      </div>
+
+      <!-- Q_autodommage — copropriétaire victime ET responsable ? -->
+      <div id="q_autodz" style="display:none" class="fg">
+        <div class="fg-lbl-row">
+          <label class="flabel">Le copropriétaire occupant est-il lui-même à l'origine de la fuite dans son propre lot ? <span class="req">*</span></label>
+          <span class="info-btn" onclick="toggleInfo('ip_auto')">ℹ Dommage à soi-même</span>
+        </div>
+        <div class="info-panel" id="ip_auto">
+          <div class="ip-title">Art. 1.1 + Lamy §5298 — Dommages que l'assuré se cause à lui-même</div>
+          <div class="ip-body">
+            Le réputé garanti de la Convention IRSI <strong>ne s'applique pas</strong> aux dommages que l'assuré se cause à lui-même (ex : un copropriétaire dont la baignoire fuit et qui inonde uniquement son propre appartement).<br><br>
+            Dans ce cas, c'est son propre contrat d'assurance habitation qui prend en charge — pas l'IRSI. Le dossier sort de la Convention.<br><br>
+            <strong>Attention :</strong> si la fuite cause aussi des dommages chez un voisin ou dans les parties communes, l'IRSI s'applique pour ces autres locaux.
+          </div>
+          <div class="ip-hl"><strong>Ce qu'on attend :</strong> Les dommages affectent-ils uniquement le lot du copropriétaire lui-même, ET c'est lui qui est à l'origine ?</div>
+        </div>
+        <div class="ynu" style="grid-template-columns:1fr 1fr;margin-top:8px">
+          <button class="yn yn-non" id="qautod-oui" onclick="ansAutoD(true)"><span class="yn-lbl">Oui — victime et responsable</span><span class="yn-sub">Hors IRSI — contrat personnel</span></button>
+          <button class="yn yn-oui" id="qautod-non" onclick="ansAutoD(false)"><span class="yn-lbl">Non — autre local endommagé</span><span class="yn-sub">IRSI applicable normalement</span></button>
+        </div>
+      </div>
+
       <div id="q6z" style="display:none" class="fg">
         <div class="fg-lbl-row">
           <label class="flabel">Occupation du local au jour du sinistre <span class="req">*</span></label>
@@ -3130,24 +3269,30 @@ td{border-bottom:1px solid #F0EFEC!important;color:var(--ink-2)!important;font-s
   </div>
   <div class="g-toc">
     <span class="g-toc-btn on" onclick="showGuide('gs1',this)">Présentation</span>
-    <span class="g-toc-btn" onclick="showGuide('gs2',this)">⚖ Rôle du syndic</span>
+    <span class="g-toc-btn" onclick="showGuide('gs2',this)">Rôle du syndic</span>
     <span class="g-toc-btn" onclick="showGuide('gs3',this)">Tranches T1 / T2</span>
-    <span class="g-toc-btn" onclick="showGuide('gs4',this)">☑ Les 9 obligations</span>
+    <span class="g-toc-btn" onclick="showGuide('gs4',this)">Les 9 obligations</span>
     <span class="g-toc-btn" onclick="showGuide('gs5',this)">Désignation AG</span>
     <span class="g-toc-btn" onclick="showGuide('gs6',this)">Causes exclues</span>
     <span class="g-toc-btn" onclick="showGuide('gs7',this)">Points de vigilance</span>
+    <span class="g-toc-btn" onclick="showGuide('gs8',this)">RDF — juillet 2020</span>
+    <span class="g-toc-btn" onclick="showGuide('gs9',this)">Remboursement / Récupération</span>
+    <span class="g-toc-btn" onclick="showGuide('gs10',this);renderIRSITree()">Arbre décisionnel</span>
+    <span class="g-toc-btn" onclick="showGuide('gs11',this)">Modèles de communication</span>
   </div>
 
   <!-- G1 -->
   <div class="g-sec on" id="gs1">
-    <div class="gs-hd"><div class="gs-eye">Section 1</div><div class="gs-title">Qu'est-ce que la Convention IRSI ?</div><div class="gs-sub">Accord interprofessionnel signé par <strong>plus de 99 % des assureurs français</strong>. En vigueur depuis le <strong>1er juin 2018</strong>, elle remplace les anciennes conventions CIDRE (DDE) et CID (incendies).</div></div>
+    <div class="gs-hd"><div class="gs-eye">Section 1</div><div class="gs-title">Qu'est-ce que la Convention IRSI ?</div><div class="gs-sub">Accord interprofessionnel signé par <strong>plus de 99 % des assureurs français</strong>. En vigueur depuis le <strong>1er juin 2018</strong> pour les DDE et incendies en copropriété, modifiée en <strong>juillet 2020</strong> sur les règles de recherche de fuite.</div></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-      <div class="card"><div style="padding:18px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:600;margin-bottom:10px"> Historique &amp; contexte</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.75"><p>Avant 2018, les sinistres immeuble (DDE et incendies en copropriété) relevaient de deux conventions distinctes : la <strong>Convention CIDRE</strong> pour les dégâts des eaux et la <strong>Convention CID</strong> pour les incendies. Complexes et sources de litiges, elles ont été unifiées dans l'IRSI.</p><p style="margin-top:8px">L'IRSI introduit un principe clé : <strong>"chacun chez soi"</strong> pour les petits sinistres (T1), supprimant les recherches de responsabilité. Pour T2, une expertise amiable organise les recours.</p></div></div></div>
-      <div class="card"><div style="padding:18px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:600;margin-bottom:10px">Objectifs</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.75"><p><strong>1. Simplifier et accélérer</strong> — objectif : régler T1 en moins de 30 jours.</p><p style="margin-top:6px"><strong>2. Réduire les litiges</strong> — règles claires de désignation et d'indemnisation entre assureurs.</p><p style="margin-top:6px"><strong>3. Protéger les sinistrés</strong> — principe du <em>réputé garanti</em> : franchises et règles proportionnelles inopposables aux assurés.</p><p style="margin-top:6px"><strong>4. Responsabiliser le syndic</strong> — obligations précises, gage d'un traitement rigoureux.</p></div></div></div>
+      <div class="card"><div style="padding:18px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:600;margin-bottom:10px">Historique &amp; contexte</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.75"><p>Avant 2018, les sinistres immeuble relevaient de deux conventions distinctes : la <strong>Convention CIDRE</strong> pour les dégâts des eaux et la <strong>Convention CIDE COP</strong> pour les sinistres en copropriété. Complexes et sources de litiges, elles ont été unifiées dans l'IRSI.</p><p style="margin-top:8px">L'IRSI introduit un principe clé : <strong>"chacun chez soi"</strong> pour les petits sinistres (T1), supprimant les recherches de responsabilité. Pour T2, une expertise amiable pour compte commun organise les recours.</p><p style="margin-top:8px">En <strong>juillet 2020</strong>, les règles de recherche de fuite ont été réformées : l'organisation n'incombe plus nécessairement à l'AG mais à chaque assureur selon la situation du local.</p></div></div></div>
+      <div class="card"><div style="padding:18px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:600;margin-bottom:10px">Objectifs de la Convention</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.75"><p><strong>1. Simplifier et accélérer</strong> — objectif : régler T1 en moins de 30 jours.</p><p style="margin-top:6px"><strong>2. Réduire les litiges</strong> — règles claires de désignation et d'indemnisation entre assureurs.</p><p style="margin-top:6px"><strong>3. Protéger les sinistrés</strong> — principe du <em>réputé garanti</em> : franchises et règles proportionnelles inopposables. Exception : non-assurance (absence, résiliation, suspension, nullité de contrat).</p><p style="margin-top:6px"><strong>4. Responsabiliser le syndic</strong> — obligations précises, gage d'un traitement rigoureux.</p><p style="margin-top:6px"><strong>5. CORAL</strong> — les litiges entre assureurs sur l'application de l'IRSI sont réglés par la convention d'arbitrage CORAL (GCA) avant tout recours judiciaire.</p></div></div></div>
     </div>
-    <div class="card" style="margin-top:14px"><div style="padding:16px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:600;margin-bottom:12px"> Périmètre &amp; principe du Réputé garanti</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div style="background:var(--forest-pale);border-radius:9px;padding:13px;border:1px solid rgba(26,92,64,.14)"><div style="font-size:11.5px;font-weight:700;color:var(--forest);margin-bottom:7px">Sinistres couverts</div><div style="font-size:12px;color:var(--ink-2);line-height:1.7">• DDE et infiltrations en copropriété<br>• Incendies en copropriété<br>• Immeuble locatif, copropriété, indivision</div></div><div style="background:var(--crimson-pale);border-radius:9px;padding:13px;border:1px solid rgba(125,26,29,.12)"><div style="font-size:11.5px;font-weight:700;color:var(--crimson-mid);margin-bottom:7px">Hors périmètre</div><div style="font-size:12px;color:var(--ink-2);line-height:1.7">• Hôtels et chambres d'hôtes<br>• Sinistres &gt; 5 000 € HT par local<br>• Causes expressément exclues</div></div><div style="background:var(--cobalt-pale);border-radius:9px;padding:13px;border:1px solid rgba(43,78,168,.12)"><div style="font-size:11.5px;font-weight:700;color:var(--cobalt-mid);margin-bottom:7px">Réputé garanti</div><div style="font-size:12px;color:var(--ink-2);line-height:1.7">L'AG indemnise contenu, embellissements, PIP et frais de RDF <strong>sans opposer franchises ni règles proportionnelles</strong>. Exception : non-assurance (absence, résiliation, suspension, nullité).</div></div><div style="background:var(--cognac-pale);border-radius:9px;padding:13px;border:1px solid rgba(160,92,20,.18)"><div style="font-size:11.5px;font-weight:700;color:var(--cognac);margin-bottom:7px">Signataires</div><div style="font-size:12px;color:var(--ink-2);line-height:1.7">Plus de <strong>99 % des assureurs français</strong> membres de France Assureurs (ex-FFA) ont signé l'IRSI. En pratique, seules quelques mutuelles étrangères ou compagnies spécialisées ne sont pas signataires.</div></div></div></div></div>
-  </div>
+    <div class="card" style="margin-top:14px"><div style="padding:16px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:600;margin-bottom:12px">Périmètre &amp; principe du Réputé garanti</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div style="background:var(--forest-pale);border-radius:9px;padding:13px;border:1px solid rgba(26,92,64,.14)"><div style="font-size:11.5px;font-weight:700;color:var(--forest);margin-bottom:7px">Sinistres couverts</div><div style="font-size:12px;color:var(--ink-2);line-height:1.7">DDE et infiltrations en copropriété<br>Incendies en copropriété<br>Immeuble locatif, copropriété, indivision<br>Immeuble mitoyen si assureur signataire</div></div><div style="background:var(--crimson-pale);border-radius:9px;padding:13px;border:1px solid rgba(125,26,29,.12)"><div style="font-size:11.5px;font-weight:700;color:var(--crimson-mid);margin-bottom:7px">Hors périmètre</div><div style="font-size:12px;color:var(--ink-2);line-height:1.7">Hôtels et chambres d'hôtes (toutes tranches)<br>Locaux pro/mixtes si T2 et partie pro affectée<br>Sinistres &gt; 5 000 € HT par local<br>Causes expressément exclues<br>Dommages que l'assuré se cause à lui-même</div></div><div style="background:var(--cobalt-pale);border-radius:9px;padding:13px;border:1px solid rgba(43,78,168,.12)"><div style="font-size:11.5px;font-weight:700;color:var(--cobalt-mid);margin-bottom:7px">Réputé garanti</div><div style="font-size:12px;color:var(--ink-2);line-height:1.7">L'AG indemnise contenu (vétusté déduite), embellissements, parties immobilières privatives (valeur à neuf) et frais RDF <strong>sans opposer franchises ni règles proportionnelles</strong>. Les dommages immatériels (DI) ne sont <em>pas</em> réputés garantis.</div></div><div style="background:var(--cognac-pale);border-radius:9px;padding:13px;border:1px solid rgba(160,92,20,.18)"><div style="font-size:11.5px;font-weight:700;color:var(--cognac);margin-bottom:7px">Signataires &amp; CORAL</div><div style="font-size:12px;color:var(--ink-2);line-height:1.7">Plus de <strong>99 % des assureurs français</strong> membres de France Assureurs. Litiges entre assureurs → arbitrage <strong>CORAL</strong> (GCA, 1 rue Jules Lefebvre 75009 Paris) avant tout recours judiciaire.</div></div></div></div></div>
 
+
+
+  </div>
   <!-- G2 -->
   <div class="g-sec" id="gs2">
     <div class="gs-hd"><div class="gs-eye">Section 2</div><div class="gs-title">Le rôle central du syndic dans l'IRSI</div><div class="gs-sub">Le syndic est le <strong>pivot central</strong> du traitement IRSI. Il représente le syndicat des copropriétaires, gère les parties communes et est l'interface légale entre les assureurs et les copropriétaires.</div></div>
@@ -3166,20 +3311,20 @@ td{border-bottom:1px solid #F0EFEC!important;color:var(--ink-2)!important;font-s
 
   <!-- G3 -->
   <div class="g-sec" id="gs3">
-    <div class="gs-hd"><div class="gs-eye">Section 3</div><div class="gs-title">Les 2 tranches T1 et T2 — et au-delà de 5 000 €</div><div class="gs-sub">La Convention distingue trois situations selon le montant des <strong>dommages immédiats (DI)</strong> par local et par sinistre. Les règles d'indemnisation et de recours sont radicalement différentes selon la tranche.</div></div>
+    <div class="gs-hd"><div class="gs-eye">Section 3</div><div class="gs-title">Les 2 tranches T1 et T2 — et au-delà de 5 000 €</div><div class="gs-sub">La Convention distingue trois situations selon le montant de l'<strong>assiette par local</strong> (dommages matériels + frais afférents HT). Attention : les <em>dommages immatériels</em> (DI = pertes de loyer, frais de relogement…) ne font <strong>pas</strong> partie de l'assiette.</div></div>
     <div class="tranche-row">
-      <div class="tr-card tr-t1"><div class="tr-name">Tranche T1</div><div class="tr-range" style="color:var(--forest)">DI ≤ 1 600 € HT</div><ul class="tr-items"><li>L'AG indemnise <strong>directement</strong> son assuré sans recherche de responsabilité</li><li><strong>Aucun recours</strong> possible entre assureurs ("chacun chez soi")</li><li>Pas d'expertise obligatoire — accord amiable sur devis</li><li>Objectif : règlement en <strong>30 jours</strong></li><li>Franchises et règles proportionnelles <strong>inopposables</strong></li></ul></div>
-      <div class="tr-card tr-t2"><div class="tr-name">Tranche T2</div><div class="tr-range" style="color:var(--cognac)">1 600 € &lt; DI ≤ 5 000 € HT</div><ul class="tr-items"><li><strong>Expertise amiable obligatoire</strong> mandatée par l'AG</li><li>Expert convoqué dans les <strong>15 jours</strong> suivant l'ordre de mission</li><li><strong>Recours possible</strong> de l'AG contre l'ANG après paiement</li><li>Le syndic <strong>doit être présent</strong> ou représenté</li><li>Réponse LRAR expert <strong>obligatoire avant J+10</strong></li></ul></div>
-      <div class="tr-card tr-over"><div class="tr-name">Au-delà de 5 000 €</div><div class="tr-range" style="color:var(--crimson-mid)">DI &gt; 5 000 € HT</div><ul class="tr-items"><li><strong>Sortie automatique</strong> de la Convention IRSI</li><li>Bascule en <strong>expertise contradictoire</strong> de droit commun</li><li>Chaque assureur mandate son propre expert</li><li>Le syndic informe <strong>immédiatement</strong> l'assureur immeuble</li><li>Procédures longues — régime de droit commun</li></ul></div>
+      <div class="tr-card tr-t1"><div class="tr-name">Tranche T1</div><div class="tr-range" style="color:var(--forest)">Assiette ≤ 1 600 € HT</div><ul class="tr-items"><li>L'AG indemnise <strong>directement</strong> son assuré sans recherche de responsabilité</li><li><strong>Aucun recours</strong> entre assureurs — "chacun chez soi"</li><li>Pas d'expertise obligatoire — accord amiable sur devis</li><li>Objectif : règlement en <strong>30 jours</strong></li><li>Franchises et règles proportionnelles <strong>inopposables</strong></li><li>Exception : sinistre répétitif → recours possible dès le 2e sinistre</li></ul></div>
+      <div class="tr-card tr-t2"><div class="tr-name">Tranche T2</div><div class="tr-range" style="color:var(--cognac)">1 600 € &lt; Assiette ≤ 5 000 € HT</div><ul class="tr-items"><li><strong>Expertise pour compte commun</strong> mandatée par l'AG — un seul expert</li><li>Expert convoqué dans les <strong>15 jours</strong> suivant l'ordre de mission</li><li><strong>Recours possible</strong> de l'AG contre l'assureur du responsable (barème)</li><li>Le syndic <strong>doit être présent</strong> ou représenté</li><li>Réponse LRAR expert <strong>avant J+10</strong></li><li>Rapport expert <strong>opposable et incontestable</strong> entre assureurs</li></ul></div>
+      <div class="tr-card tr-over"><div class="tr-name">Au-delà de 5 000 €</div><div class="tr-range" style="color:var(--crimson-mid)">Assiette &gt; 5 000 € HT</div><ul class="tr-items"><li><strong>Sortie automatique</strong> de la Convention IRSI</li><li>Bascule en <strong>expertise contradictoire</strong> de droit commun</li><li>Chaque assureur mandate son propre expert</li><li>Le syndic informe <strong>immédiatement</strong> l'assureur immeuble</li><li>Procédures longues — régime de droit commun</li></ul></div>
     </div>
-    <div class="alert-box ab-warn"><strong>Assiette (montant déterminant la tranche) :</strong> calculée sur les <em>Dommages Immédiats</em> — dommages matériels directs au local, hors frais annexes. C'est l'expert qui la calcule en T2. Le syndic doit anticiper le risque de dépassement dès l'ouverture du dossier.</div>
+    <div class="card" style="margin-top:14px"><div style="padding:14px"><div style="font-family:'Cormorant',serif;font-size:14px;font-weight:700;margin-bottom:10px">Composition de l'assiette (Art. 4.1)</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div style="background:var(--forest-pale);border-radius:7px;padding:11px;border:1px solid rgba(26,92,64,.12)"><div style="font-size:11px;font-weight:700;color:var(--forest);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px">Inclus dans l'assiette</div><div style="font-size:12px;color:var(--ink-2);line-height:1.7">Dommages au contenu (vétusté déduite)<br>Dommages aux embellissements<br>Parties immobilières privatives (valeur à neuf)<br>Frais RDF indemnisés par l'AG<br>Mesures conservatoires et de sauvetage<br>Frais de déplacement des mobiliers<br>Frais de déblaiement et diagnostics</div></div><div style="background:var(--crimson-pale);border-radius:7px;padding:11px;border:1px solid rgba(125,26,29,.1)"><div style="font-size:11px;font-weight:700;color:var(--crimson-mid);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px">Exclus de l'assiette</div><div style="font-size:12px;color:var(--ink-2);line-height:1.7"><strong>Dommages immatériels (DI)</strong> — pertes de loyer, frais de relogement, perte d'usage (traités séparément)<br>Frais RDF pris en charge par un autre assureur que l'AG<br>DI ≤ 5 000 € → expertise pour compte commun<br>DI &gt; 5 000 € → expertise contradictoire obligatoire (Art. 5.3)</div></div></div></div></div>
   </div>
 
   <!-- G4 -->
   <div class="g-sec" id="gs4">
     <div class="gs-hd"><div class="gs-eye">Section 4</div><div class="gs-title">Les 9 obligations du syndic — analyse complète</div><div class="gs-sub">Ces 9 obligations couvrent l'ensemble du workflow IRSI pour DDE et incendies. Classées par nature : <span class="badge b-oblig" style="font-size:10px">Obligatoire</span> délai imposé · <span class="badge b-action" style="font-size:10px">Action</span> démarche à initier · <span class="badge b-collect" style="font-size:10px">Collecte</span> pièces à rassembler.</div></div>
     <div class="obl-list">
-      <div class="obl-item2 ob2-action"><div class="obl-top-bar"></div><div class="obl-body2"><div class="obl-h"><div><div class="obl-num">Obligation 1</div><div class="obl-title2">Investigations préalables de recherche de fuite</div><div class="obl-art2">Art. 3.2 — Titre 3</div></div><span class="badge b-action">Action</span></div><div class="obl-content2"><p>Lorsque le syndic décide d'initier une recherche de fuite sur les parties communes <em>avant ou au moment de la déclaration de sinistre</em>, il mandate un professionnel qualifié, supervise l'intervention et en assure le suivi. Les frais de RDF sur parties communes sont pris en charge par l'<strong>assureur de l'immeuble</strong>.</p></div><div class="obl-docs2"><div class="obl-docs2-title">Documents à collecter :</div><ul><li>Compte-rendu d'intervention (avec ou sans identification de cause)</li><li>Facture de la recherche de fuite</li><li>Photos état des lieux avant/après</li></ul></div><div class="obl-delai2">⏱ Avant toute aggravation du sinistre</div></div></div>
+      <div class="obl-item2 ob2-action"><div class="obl-top-bar"></div><div class="obl-body2"><div class="obl-h"><div><div class="obl-num">Obligation 1</div><div class="obl-title2">Investigations préalables de recherche de fuite</div><div class="obl-art2">Art. 3.2 — Titre 3 — Réforme juillet 2020</div></div><span class="badge b-action">Action</span></div><div class="obl-content2"><p>Lorsque le syndic décide d'initier une recherche de fuite, il mandate un professionnel qualifié et supervise l'intervention.</p><p style="margin-top:6px"><strong>Règle juillet 2020 — qui prend en charge les frais ?</strong></p><ul style="margin-top:4px;padding-left:16px;font-size:12px;color:var(--ink-2);line-height:1.8"><li><strong>Parties communes :</strong> assureur de l'immeuble organise et prend en charge.</li><li><strong>RDF organisée par le syndic, source dans un lot privatif :</strong> c'est l'assureur du <strong>copropriétaire propriétaire du local source</strong> (occupant ou CNO) qui prend en charge — même s'il n'est pas responsable conventionnellement.</li><li><strong>RDF destructive dans un autre local :</strong> assureur de l'immeuble organise.</li><li><strong>Occupant non assuré / local vacant/meublé/congé :</strong> assureur du CNO organise dans son local.</li></ul><p style="margin-top:6px">Seuls les frais RDF <em>indemnisés par l'AG</em> entrent dans l'assiette T1/T2.</p></div><div class="obl-docs2"><div class="obl-docs2-title">Documents à collecter :</div><ul><li>Compte-rendu d'intervention (avec ou sans identification de cause)</li><li>Facture de la recherche de fuite</li><li>Photos état des lieux avant/après</li></ul></div><div class="obl-delai2">⏱ Avant toute aggravation du sinistre</div></div></div>
       <div class="obl-item2 ob2-oblig"><div class="obl-top-bar"></div><div class="obl-body2"><div class="obl-h"><div><div class="obl-num">Obligation 2 ⚠ CRITIQUE</div><div class="obl-title2">Investigations si cause inlocalisable — rôle de l'assureur de l'immeuble</div><div class="obl-art2">Art. 3.4 — Exception à Art. 3.3</div></div><span class="badge b-oblig">Obligatoire</span></div><div class="obl-content2"><p>Si l'origine ne peut être localisée, diligenter <strong>"sans délai"</strong> les investigations de RDF.</p><p><strong>Mécanisme exact (Art. 3.4) :</strong> L'AG informe le syndic/propriétaire de l'immeuble de son impossibilité à localiser la cause. L'expert adresse alors une lettre au syndic lui demandant de <em>"diligenter sans délai et sous son contrôle des investigations de recherche de fuite"</em> (modèle Annexe 4 de la Convention). L'assureur de l'immeuble organise et peut prendre en charge les frais sous conditions.</p><p>⚠ <strong>"Sans délai"</strong> est la seule formulation dans toute la Convention portée directement par le comportement du syndic. Risque juridique direct pour le syndicat en cas de tardiveté.</p></div><div class="obl-docs2"><div class="obl-docs2-title">À transmettre à l'expert :</div><ul><li>CR d'intervention du professionnel mandaté + facture RDF</li><li>Coordonnées assureur immeuble (réf. contrat, contact gestionnaire)</li></ul></div><div class="obl-delai2" style="color:#6E0F12;font-weight:800">⏱ SANS DÉLAI — Art. 3.4 : seule obligation portée directement par le syndic</div></div></div>
       <div class="obl-item2 ob2-oblig"><div class="obl-top-bar"></div><div class="obl-body2"><div class="obl-h"><div><div class="obl-num">Obligation 3</div><div class="obl-title2">Répondre LRAR expert — Coordonnées assureur</div><div class="obl-art2">Annexe 4 §3.6</div></div><span class="badge b-oblig">Obligatoire</span></div><div class="obl-content2"><p>En T2, l'expert envoie une LRAR au syndic pour obtenir les coordonnées de l'assureur immeuble. Le syndic doit répondre <strong>avant J+10</strong>.</p><p>Sans réponse à J+10, l'expert est autorisé à déposer son rapport à J+30 <em>sans les coordonnées de l'assureur immeuble</em> — ce qui bloque la procédure de recours.</p></div><div class="obl-delai2">⏱ Avant J+10 à compter de la réception de la LRAR de l'expert</div></div></div>
       <div class="obl-item2 ob2-oblig"><div class="obl-top-bar"></div><div class="obl-body2"><div class="obl-h"><div><div class="obl-num">Obligation 4</div><div class="obl-title2">Participation à l'expertise amiable T2</div><div class="obl-art2">Annexe 4 §2.1</div></div><span class="badge b-oblig">Obligatoire</span></div><div class="obl-content2"><p>Le syndic doit être <strong>présent ou représenté</strong> à la 1ère réunion d'expertise, fournir l'accès aux parties communes et mettre à disposition tous les documents demandés.</p></div><div class="obl-docs2"><div class="obl-docs2-title">Documents à avoir disponibles :</div><ul><li>Plans des parties communes (dernière mise à jour)</li><li>Contrats d'entretien des équipements</li><li>Décisions judiciaires antérieures relatives aux parties communes</li><li>Extrait du registre des sinistres</li></ul></div><div class="obl-delai2">⏱ 1ère réunion ≤ J+15 après l'ordre de mission de l'AG</div></div></div>
@@ -3193,7 +3338,38 @@ td{border-bottom:1px solid #F0EFEC!important;color:var(--ink-2)!important;font-s
 
   <!-- G5 -->
   <div class="g-sec" id="gs5">
-    <div class="gs-hd"><div class="gs-eye">Section 5</div><div class="gs-title">Désignation de l'Assureur Gestionnaire — les 10 cas</div><div class="gs-sub">L'AG est désigné selon le tableau de l'Annexe 1. Il pilote le dossier, mandate l'expert en T2 et indemnise directement l'assuré. Les lignes en rouge correspondent aux cas de subsidiarité de l'assureur immeuble.</div></div>
+    <div class="gs-hd"><div class="gs-eye">Section 5</div><div class="gs-title">Désignation de l'Assureur Gestionnaire — les 10 cas</div><div class="gs-sub">L'AG (Assureur Gestionnaire) est désigné selon le tableau de l'Annexe 1. Il pilote le dossier, mandate l'expert en T2 et indemnise. L'ANG (Assureur Non Gestionnaire) est le responsable conventionnel contre qui le recours sera exercé en T2. Les lignes en rouge = subsidiarité de l'assureur immeuble.</div></div>
+    <div class="card">
+      <table>
+        <thead><tr><th>#</th><th>Type local</th><th>Occupation</th><th>Assurances</th><th>Assureur Gestionnaire (AG) désigné</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:700;color:var(--ink-4);font-size:11px">1</td><td style="font-size:12px">Privatif</td><td style="font-size:12px">Copropriétaire occupant</td><td style="font-size:12px">Copropriétaire <strong>assuré</strong></td><td><span class="badge b-dde">Assureur du copropriétaire</span></td></tr>
+          <tr style="background:var(--crimson-pale)"><td style="font-weight:700;color:var(--crimson-mid);font-size:11px">2</td><td style="font-size:12px">Privatif</td><td style="font-size:12px">Copropriétaire occupant</td><td style="font-size:12px">Copropriétaire <strong>non assuré</strong></td><td><span class="badge b-action">Assureur immeuble (subsidiarité directe — Art. 2.1.3 cas 2)</span></td></tr>
+          <tr><td style="font-weight:700;color:var(--ink-4);font-size:11px">3</td><td style="font-size:12px">Privatif</td><td style="font-size:12px">Locataire / occupant NP</td><td style="font-size:12px">Occupant NP <strong>assuré</strong></td><td><span class="badge b-dde">Assureur de l'occupant NP</span></td></tr>
+          <tr><td style="font-weight:700;color:var(--ink-4);font-size:11px">4</td><td style="font-size:12px">Privatif</td><td style="font-size:12px">Locataire / occupant NP</td><td style="font-size:12px">Occupant NP non assuré — CNO <strong>assuré</strong></td><td><span class="badge b-dde">Assureur du CNO</span></td></tr>
+          <tr style="background:var(--crimson-pale)"><td style="font-weight:700;color:var(--crimson-mid);font-size:11px">5</td><td style="font-size:12px">Privatif</td><td style="font-size:12px">Locataire / occupant NP</td><td style="font-size:12px">Occupant NP non assuré — CNO <strong>non assuré</strong></td><td><span class="badge b-action">Assureur immeuble (subsidiarité)</span></td></tr>
+          <tr><td style="font-weight:700;color:var(--ink-4);font-size:11px">6</td><td style="font-size:12px">Privatif</td><td style="font-size:12px">Meublé / Saisonnier / Congé</td><td style="font-size:12px">CNO <strong>assuré</strong></td><td><span class="badge b-dde">Assureur du CNO</span></td></tr>
+          <tr style="background:var(--crimson-pale)"><td style="font-weight:700;color:var(--crimson-mid);font-size:11px">7</td><td style="font-size:12px">Privatif</td><td style="font-size:12px">Meublé / Saisonnier / Congé</td><td style="font-size:12px">CNO <strong>non assuré</strong></td><td><span class="badge b-action">Assureur immeuble (subsidiarité)</span></td></tr>
+          <tr><td style="font-weight:700;color:var(--ink-4);font-size:11px">8</td><td style="font-size:12px">Privatif</td><td style="font-size:12px">Vacant</td><td style="font-size:12px">CNO <strong>assuré</strong></td><td><span class="badge b-dde">Assureur du CNO</span></td></tr>
+          <tr style="background:var(--crimson-pale)"><td style="font-weight:700;color:var(--crimson-mid);font-size:11px">9</td><td style="font-size:12px">Privatif</td><td style="font-size:12px">Vacant</td><td style="font-size:12px">CNO <strong>non assuré</strong></td><td><span class="badge b-action">Assureur immeuble (subsidiarité)</span></td></tr>
+          <tr style="background:var(--cobalt-pale)"><td style="font-weight:700;color:var(--cobalt-mid);font-size:11px">10</td><td style="font-size:12px"><strong>Parties communes</strong></td><td style="font-size:12px" colspan="2">— toujours</td><td><span class="badge b-action">Assureur de l'immeuble (Art. 2.1.1)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:10px;padding:10px 14px;background:var(--cognac-pale);border:1px solid rgba(160,92,20,.15);border-radius:8px;font-size:12px;color:var(--ink-2);line-height:1.65">
+      <strong>Rappel terminologie :</strong> <strong>AG</strong> = Assureur Gestionnaire (pilote le dossier, indemnise l'assuré, mandate l'expert en T2). <strong>ANG</strong> = Assureur Non Gestionnaire (assureur du responsable conventionnel, contre qui l'AG exercera le recours en T2). En T1, aucun recours → pas d'ANG impliqué sauf sinistre répétitif.
+    </div>
+    <div class="card" style="margin-top:16px"><div class="card-hd"><div class="card-title">Transitions de phases — arbre complet</div></div>
+    <table><thead><tr><th>Condition déclenchante</th><th>Phase actuelle</th><th>Phase suivante</th><th>Remarque</th></tr></thead>
+    <tbody>
+      <tr><td style="font-size:12.5px">Cause connue à l'ouverture (DDE)</td><td><span class="phase-pill pp-d" style="font-size:10.5px">Désignation AG</span></td><td><span class="phase-pill pp-e" style="font-size:10.5px">Expertise</span></td><td style="font-size:11.5px;color:var(--ink-3)">Recherche fuite sautée</td></tr>
+      <tr><td style="font-size:12.5px">Cause inconnue à l'ouverture (DDE)</td><td><span class="phase-pill pp-d" style="font-size:10.5px">Désignation AG</span></td><td><span class="phase-pill pp-r" style="font-size:10.5px">Rech. de fuite</span></td><td style="font-size:11.5px;color:var(--ink-3)">Workflow DDE complet</td></tr>
+      <tr><td style="font-size:12.5px">Type sinistre = Incendie</td><td><span class="phase-pill pp-d" style="font-size:10.5px">Désignation AG</span></td><td><span class="phase-pill pp-e" style="font-size:10.5px">Expertise</span></td><td style="font-size:11.5px;color:var(--ink-3)">Rech. fuite sautée pour tout incendie</td></tr>
+      <tr><td style="font-size:12.5px">Assiette ≤ 1 600 € HT — T1</td><td><span class="phase-pill pp-e" style="font-size:10.5px">Expertise</span></td><td><span class="phase-pill pp-p" style="font-size:10.5px">Réparations</span></td><td style="font-size:11.5px;color:var(--ink-3)">T1 : abandon de recours (sauf répétitif)</td></tr>
+      <tr><td style="font-size:12.5px">1 600 € &lt; Assiette ≤ 5 000 € — T2, rapport reçu</td><td><span class="phase-pill pp-e" style="font-size:10.5px">Expertise</span></td><td><span class="phase-pill pp-p" style="font-size:10.5px">Réparations</span></td><td style="font-size:11.5px;color:var(--ink-3)">T2 : recours obligatoire après paiement</td></tr>
+      <tr style="background:var(--crimson-pale)"><td style="font-size:12.5px;color:var(--crimson-mid)"><strong>Sortie IRSI</strong> — toute condition C1-C4 invalidée</td><td><span class="badge b-gray">Toute phase</span></td><td><span class="phase-pill" style="background:#FEF2F2;color:#991B1B;font-size:10.5px">Hors IRSI</span></td><td style="font-size:11.5px;color:var(--crimson-mid)">Irréversible — droit commun</td></tr>
+    </tbody></table></div>
+  </div>
     <div class="card">
       <table>
         <thead><tr><th>#</th><th>Type local</th><th>Occupation</th><th>Assurances</th><th>Assureur Gestionnaire désigné</th></tr></thead>
@@ -3225,7 +3401,6 @@ td{border-bottom:1px solid #F0EFEC!important;color:var(--ink-2)!important;font-s
       <tr><td style="font-size:12.5px">Recours traité ou prescription écoulée</td><td><span class="phase-pill pp-rc" style="font-size:10.5px">Recours</span></td><td><span class="phase-pill pp-c" style="font-size:10.5px">Clôture</span></td><td style="font-size:11.5px;color:var(--ink-3)">Fin T2</td></tr>
       <tr style="background:var(--crimson-pale)"><td style="font-size:12.5px;color:var(--crimson-mid)"><strong>Sortie IRSI</strong> — toute condition C1-C4 invalidée</td><td><span class="badge b-gray">Toute phase</span></td><td><span class="phase-pill pp-h" style="font-size:10.5px">Hors IRSI</span></td><td style="font-size:11.5px;color:var(--crimson-mid)">Irréversible</td></tr>
     </tbody></table></div>
-  </div>
 
   <!-- G6 -->
   <div class="g-sec" id="gs6">
@@ -3255,15 +3430,345 @@ td{border-bottom:1px solid #F0EFEC!important;color:var(--ink-2)!important;font-s
 
   <!-- G7 -->
   <div class="g-sec" id="gs7">
-    <div class="gs-hd"><div class="gs-eye">Section 7</div><div class="gs-title">Points de vigilance &amp; bonnes pratiques du syndic</div><div class="gs-sub">Ces points concentrent les principaux risques juridiques et pratiques identifiés dans l'application de la Convention IRSI.</div></div>
+    <div class="gs-hd"><div class="gs-eye">Section 7</div><div class="gs-title">Points de vigilance &amp; bonnes pratiques</div><div class="gs-sub">Ces points concentrent les principaux risques juridiques et pratiques identifiés dans l'application de la Convention IRSI et la jurisprudence.</div></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-      <div style="background:linear-gradient(135deg,var(--crimson-pale),#FAD5D5);border:1.5px solid rgba(125,26,29,.18);border-radius:var(--r);padding:18px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:700;color:var(--crimson-mid);margin-bottom:8px">⚠ Art. 3.4 — "Sans délai"</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.7">Par Art. 3.4, quand l'AG ne peut localiser la cause, <strong>l'assureur de l'immeuble organise la RDF</strong>, et l'expert envoie une lettre au syndic lui demandant de la <em>diligenter sans délai sous son contrôle</em>. C'est la seule formulation de la Convention portée directement par le comportement du syndic. <strong>Toute tardiveté expose le syndicat à une responsabilité directe.</strong></div></div>
-      <div style="background:linear-gradient(135deg,var(--crimson-pale),#FAD5D5);border:1.5px solid rgba(125,26,29,.18);border-radius:var(--r);padding:18px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:700;color:var(--crimson-mid);margin-bottom:8px">⚠ J+10 — Réponse LRAR expert</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.7">Avoir toujours les coordonnées de l'assureur immeuble <strong>sous la main</strong> (réf. contrat, email gestionnaire). Un oubli ou un retard peut bloquer tout le processus d'expertise et générer un litige.</div></div>
-      <div style="background:linear-gradient(135deg,var(--crimson-pale),#FAD5D5);border:1.5px solid rgba(125,26,29,.18);border-radius:var(--r);padding:18px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:700;color:var(--crimson-mid);margin-bottom:8px">⚠ Prescription 2 ans — Art. 10</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.7">Le syndicat est <em>débiteur</em> de l'action en récupération. Ne pas traiter une demande ou tarder peut aboutir au <strong>paiement par défaut</strong>. Surveiller les dates de paiement par l'AG pour ne pas laisser courir la prescription.</div></div>
-      <div style="background:linear-gradient(135deg,var(--cognac-pale),#F9E4C2);border:1.5px solid rgba(160,92,20,.2);border-radius:var(--r);padding:18px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:700;color:var(--cognac);margin-bottom:8px">✓ Registre des sinistres</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.7">Tenir à jour un registre exhaustif : <strong>date, local, type, assureurs, montant, conclusion</strong>. Indispensable pour honorer les obligations 2, 4 et 9. Une copropriété sans registre à jour est exposée à des sanctions.</div></div>
-      <div style="background:linear-gradient(135deg,var(--forest-pale),#C8EADB);border:1.5px solid rgba(26,92,64,.18);border-radius:var(--r);padding:18px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:700;color:var(--forest);margin-bottom:8px">✓ Dossier probatoire</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.7">Tracer chaque action : date d'envoi, accusés de réception, dates de réponse. En cas de litige sur les délais, <strong>seule la preuve écrite fait foi</strong>. LitConnect génère ce journal d'audit automatiquement.</div></div>
-      <div style="background:linear-gradient(135deg,var(--forest-pale),#C8EADB);border:1.5px solid rgba(26,92,64,.18);border-radius:var(--r);padding:18px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:700;color:var(--forest);margin-bottom:8px">✓ Accès experts et prestataires</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.7">S'assurer que experts et prestataires accèdent aux parties communes. Un refus d'accès ou un retard peut être assimilé à un <strong>manquement aux obligations du syndic</strong>, avec des conséquences sur l'indemnisation.</div></div>
+      <div style="background:linear-gradient(135deg,var(--crimson-pale),#FAD5D5);border:1.5px solid rgba(125,26,29,.18);border-radius:var(--r);padding:18px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:700;color:var(--crimson-mid);margin-bottom:8px">Art. 3.4 — "Sans délai"</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.7">Quand l'AG ne peut localiser la cause, l'expert adresse une lettre au syndic lui demandant de <em>diligenter sans délai sous son contrôle des investigations de RDF</em>. C'est la seule formulation de la Convention portée directement par le comportement du syndic. <strong>Toute tardiveté expose le syndicat à une responsabilité directe.</strong><br><br><strong>Attention règle 2020 :</strong> si la fuite source est dans un lot privatif, c'est l'assureur du copropriétaire (occupant ou CNO) qui prend en charge les frais — même si le syndic a organisé la RDF.</div></div>
+      <div style="background:linear-gradient(135deg,var(--crimson-pale),#FAD5D5);border:1.5px solid rgba(125,26,29,.18);border-radius:var(--r);padding:18px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:700;color:var(--crimson-mid);margin-bottom:8px">J+10 — Réponse LRAR expert</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.7">Avoir toujours les coordonnées de l'assureur immeuble <strong>sous la main</strong> (réf. contrat, email gestionnaire). Un oubli ou un retard peut bloquer tout le processus d'expertise et générer un litige. Sans réponse à J+10, l'expert peut déposer son rapport à J+30 sans les coordonnées — ce qui bloque le recours.</div></div>
+      <div style="background:linear-gradient(135deg,var(--crimson-pale),#FAD5D5);border:1.5px solid rgba(125,26,29,.18);border-radius:var(--r);padding:18px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:700;color:var(--crimson-mid);margin-bottom:8px">Prescription 2 ans — Art. 9 et 10</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.7"><strong>Action en remboursement (Art. 9) :</strong> si un assureur non désigné a payé à la place, il peut réclamer le remboursement dans les <strong>2 ans</strong> à compter du paiement.<br><strong>Action en récupération (Art. 10) :</strong> en T2, l'assureur du copropriétaire occupant qui a indemnisé les PIP peut récupérer auprès de l'assureur immeuble. <strong>2 ans</strong> à compter du paiement.<br>Le syndicat est le <em>débiteur</em> de l'action en récupération — ne pas répondre = paiement par défaut.</div></div>
+      <div style="background:linear-gradient(135deg,var(--cognac-pale),#F9E4C2);border:1.5px solid rgba(160,92,20,.2);border-radius:var(--r);padding:18px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:700;color:var(--cognac);margin-bottom:8px">CORAL — procédure d'arbitrage</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.7">Les litiges entre assureurs sur l'application de l'IRSI sont régis par la <strong>Convention CORAL</strong> (GCA — 1 rue Jules Lefebvre, 75009 Paris). Elle organise les procédures d'escalade, de conciliation et d'arbitrage. <strong>Elle est obligatoire avant tout recours judiciaire</strong> entre assureurs. Le syndic n'y est pas partie directement mais doit connaître son existence.</div></div>
+      <div style="background:linear-gradient(135deg,var(--forest-pale),#C8EADB);border:1.5px solid rgba(26,92,64,.18);border-radius:var(--r);padding:18px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:700;color:var(--forest);margin-bottom:8px">Registre des sinistres</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.7">Tenir à jour un registre exhaustif : <strong>date, local, type, assureurs, montant, conclusion</strong>. Indispensable pour honorer les obligations 2, 4 et 9. La jurisprudence sanctionne l'inaction prolongée — chaque retard doit être documenté.</div></div>
+      <div style="background:linear-gradient(135deg,var(--forest-pale),#C8EADB);border:1.5px solid rgba(26,92,64,.18);border-radius:var(--r);padding:18px"><div style="font-family:'Cormorant',serif;font-size:15px;font-weight:700;color:var(--forest);margin-bottom:8px">Jurisprudence — preuves</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.7">Photos avec métadonnées EXIF (CA Chambéry 24/06/25), constat contradictoire signé (pas auto-rempli), LRAR archivée avec AR, PV réception travaux, quittance subrogative en T2 pour recours. Sans ces pièces, les demandes d'indemnisation sont rejetées ou réduites.</div></div>
     </div>
+  </div>
+
+  <!-- G8 — RDF 2020 -->
+  <div class="g-sec" id="gs8">
+    <div class="gs-hd"><div class="gs-eye">Section 8</div><div class="gs-title">Recherche de fuite — réforme juillet 2020</div><div class="gs-sub">Depuis le 1er juillet 2020, l'organisation de la RDF n'incombe plus nécessairement à l'Assureur Gestionnaire. Les règles de prise en charge ont été profondément modifiées.</div></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+      <div class="card"><div style="padding:14px"><div style="font-weight:700;font-size:13px;margin-bottom:10px;color:var(--ink)">Qui organise la RDF ?</div>
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:12.5px;color:var(--ink-2);line-height:1.65">
+          <div style="padding:8px 10px;background:var(--forest-pale);border-radius:6px;border-left:3px solid var(--forest-mid)"><strong>Assureur de l'occupant</strong> → organise dans le local de son assuré.</div>
+          <div style="padding:8px 10px;background:var(--cognac-pale);border-radius:6px;border-left:3px solid var(--cognac-mid)"><strong>Assureur du CNO</strong> → si RDF destructive dans son local, non-assurance de l'occupant, local meublé/saisonnier, congé au jour du sinistre, local vacant.</div>
+          <div style="padding:8px 10px;background:var(--cobalt-pale);border-radius:6px;border-left:3px solid var(--cobalt-mid)"><strong>Assureur de l'immeuble</strong> → pour les parties communes + subsidiarité si copropriétaire non assuré.</div>
+          <div style="padding:8px 10px;background:var(--crimson-pale);border-radius:6px;border-left:3px solid var(--crimson-mid)"><strong>Syndic (exception) :</strong> si le syndic organise et que la fuite source est dans un lot privatif → l'assureur du copropriétaire propriétaire du local prend en charge, même sans responsabilité conventionnelle.</div>
+        </div>
+      </div></div>
+      <div class="card"><div style="padding:14px"><div style="font-weight:700;font-size:13px;margin-bottom:10px;color:var(--ink)">Prise en charge des frais</div>
+        <div style="font-size:12.5px;color:var(--ink-2);line-height:1.7">
+          Principe : chaque assureur prend en charge les RDF <strong>organisées à son initiative ou à celle de son assuré</strong>.<br><br>
+          <strong>Dans l'assiette T1/T2 :</strong> uniquement les frais RDF indemnisés par l'Assureur Gestionnaire. Les frais pris en charge par un autre assureur sont hors assiette.<br><br>
+          <strong>Recours sur les frais RDF :</strong> possible si > 1 600 € HT, sur base de la facture et des éléments relatifs à la cause (barème).<br><br>
+          <strong>RDF exclue de la convention</strong> si > 5 000 € HT — recours droit commun uniquement.<br><br>
+          <strong>Réputé garanti étendu 2020 :</strong> le réputé garanti pour la RDF s'applique maintenant aussi aux assureurs de responsabilité (pas seulement de choses), pour inciter le responsable à effectuer la RDF.
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- G9 — Remboursement vs Récupération -->
+  <div class="g-sec" id="gs9">
+    <div class="gs-hd"><div class="gs-eye">Section 9</div><div class="gs-title">Actions en remboursement et récupération</div><div class="gs-sub">Deux mécanismes distincts permettent à un assureur qui a payé "à la place" d'un autre de récupérer les sommes versées. Délai commun : <strong>2 ans à compter du paiement</strong>.</div></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div class="card"><div style="padding:16px"><div style="font-family:'Cormorant',serif;font-size:16px;font-weight:700;margin-bottom:10px;color:var(--cobalt-mid)">Action en remboursement — Art. 9</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.75">
+        <p><strong>Qui ?</strong> Un assureur <em>non conventionnellement désigné</em> qui a dû prendre en charge des dommages à la place de l'AG.</p>
+        <p style="margin-top:7px"><strong>Contre qui ?</strong> L'assureur conventionnellement désigné.</p>
+        <p style="margin-top:7px"><strong>Condition :</strong> cet assureur ne doit pas avoir préalablement indemnisé ces mêmes dommages.</p>
+        <p style="margin-top:7px"><strong>Justificatifs :</strong><br>T1 : matérialité des faits + chiffrage + preuve du règlement.<br>T2 : rapport d'expertise + justificatifs du règlement.</p>
+        <p style="margin-top:7px"><strong>Exception :</strong> les frais de RDF ne peuvent donner lieu à une action en remboursement.</p>
+        <div style="margin-top:8px;padding:7px 10px;background:var(--crimson-pale);border-radius:6px;font-size:11.5px;color:var(--crimson-mid);font-weight:600">Prescription : 2 ans à compter du paiement de l'indemnité</div>
+      </div></div></div>
+      <div class="card"><div style="padding:16px"><div style="font-family:'Cormorant',serif;font-size:16px;font-weight:700;margin-bottom:10px;color:var(--cognac)">Action en récupération — Art. 10</div><div style="font-size:12.5px;color:var(--ink-2);line-height:1.75">
+        <p><strong>Qui ?</strong> L'assureur du <em>copropriétaire occupant</em> qui a indemnisé en T2 les parties immobilières privatives (PIP).</p>
+        <p style="margin-top:7px"><strong>Contre qui ?</strong> L'assureur de l'immeuble.</p>
+        <p style="margin-top:7px"><strong>Conditions (absence de recours) :</strong> le copropriétaire occupant est conventionnellement responsable de son propre dommage, la cause est inconnue, ou le responsable conventionnel n'est pas assuré.</p>
+        <p style="margin-top:7px"><strong>Important :</strong> le <strong>syndicat est débiteur</strong> de cette action. Ne pas répondre = risque de paiement par défaut. L'assureur de l'immeuble doit être prévenu immédiatement.</p>
+        <div style="margin-top:8px;padding:7px 10px;background:var(--crimson-pale);border-radius:6px;font-size:11.5px;color:var(--crimson-mid);font-weight:600">Prescription : 2 ans à compter du paiement de l'indemnité</div>
+      </div></div></div>
+    </div>
+  </div>
+
+  <!-- G10 — Arbre décisionnel visuel -->
+  <div class="g-sec" id="gs10">
+    <div class="gs-hd"><div class="gs-eye">Section 10</div><div class="gs-title">Arbre décisionnel IRSI — tous les cas</div><div class="gs-sub">Vue synthétique de l'ensemble des questions de qualification et de leurs issues. Lisez de haut en bas : chaque branche mène à une désignation d'AG ou à une sortie de convention.</div></div>
+    <div id="irsi-tree-container" style="overflow-x:auto;padding:4px"></div>
+  </div>
+
+  <!-- G11 — Modèles de communication -->
+  <div class="g-sec" id="gs11">
+    <div class="gs-hd"><div class="gs-eye">Section 11</div><div class="gs-title">Modèles de communication</div><div class="gs-sub">Cinq modèles directement utilisables, extraits de la synthèse JP IRSI et des bonnes pratiques. Adaptez les champs entre crochets à chaque dossier.</div></div>
+
+    <!-- Model selector tabs -->
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px">
+      <button class="g-toc-btn on" id="m-tab1" onclick="showModel('m1',this)">Déclaration assureur</button>
+      <button class="g-toc-btn" id="m-tab2" onclick="showModel('m2',this)">LRAR copropriétaire responsable</button>
+      <button class="g-toc-btn" id="m-tab3" onclick="showModel('m3',this)">Notification occupation / assurance</button>
+      <button class="g-toc-btn" id="m-tab4" onclick="showModel('m4',this)">Relance expert J+10</button>
+      <button class="g-toc-btn" id="m-tab5" onclick="showModel('m5',this)">Mise en demeure Art. 3.4</button>
+    </div>
+
+    <!-- M1 — Déclaration à l'assureur -->
+    <div id="m1" class="model-block">
+      <div class="card"><div style="padding:20px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px">
+          <div>
+            <div style="font-family:'Cormorant',serif;font-size:17px;font-weight:700;color:var(--ink)">Déclaration de sinistre à l'assureur gestionnaire</div>
+            <div style="font-size:11.5px;color:var(--ink-3);margin-top:3px">Email ou courrier — À envoyer dans les 5 jours ouvrés (J+5) — Art. 3.1</div>
+          </div>
+          <button onclick="copyModel('m1-text')" class="btn btn-out btn-sm" style="flex-shrink:0">Copier</button>
+        </div>
+        <div class="model-meta" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;padding:12px;background:#F9F9F8;border-radius:8px;border:1px solid #E5E5E3;font-size:12px">
+          <div><span style="font-weight:700;color:var(--ink-3);text-transform:uppercase;font-size:10px;letter-spacing:.5px">Objet</span><br>Déclaration sinistre IRSI — [RÉFÉRENCE] — [ADRESSE] — [DATE SINISTRE]</div>
+          <div><span style="font-weight:700;color:var(--ink-3);text-transform:uppercase;font-size:10px;letter-spacing:.5px">Pièces jointes requises</span><br>Constat amiable ou rapport RDF · Photos géolocalisées · Plans parties communes si PC</div>
+        </div>
+        <pre id="m1-text" class="model-text">Madame, Monsieur,
+
+Le syndic soussigné, [NOM SYNDIC], représentant le syndicat des copropriétaires de l'immeuble sis [ADRESSE IMMEUBLE], a l'honneur de vous déclarer le sinistre suivant dans le cadre de la Convention IRSI.
+
+IDENTIFICATION DU SINISTRE
+— Référence interne : [IRSI-XXXX-XXXX]
+— Date du sinistre : [JJ/MM/AAAA]
+— Date de constat : [JJ/MM/AAAA]
+— Nature : [Dégât des eaux / Incendie]
+— Cause identifiée : [Fuite colonne montante / Cause inconnue — RDF en cours]
+— Local sinistré (victime) : [Appartement lot n° XX — M./Mme NOM — Étage]
+— Local source (si connu) : [Appartement lot n° XX — Étage]
+
+QUALIFICATION IRSI
+— C1 — Adhésion IRSI : confirmée
+— C2 — Origine dans l'immeuble : [Oui / Oui — immeuble mitoyen / Inconnu]
+— C3 — Cause exclue : [Non / Indéterminée]
+— C4 — Type local : [Habitation / Parties communes]
+— Tranche estimée : [T1 ≤ 1 600 € HT / T2 — expertise requise]
+
+OCCUPATION DU LOCAL SINISTRÉ
+— Qualité de l'occupant : [Copropriétaire occupant / Locataire]
+— Assureur occupant : [NOM COMPAGNIE — N° CONTRAT]
+— CNO (si locataire) : [NOM — NOM COMPAGNIE — N° CONTRAT]
+
+En conséquence, nous vous désignons Assureur Gestionnaire au titre de l'article 2.1.3 de la Convention IRSI.
+
+Nous demeurons à votre disposition pour tout renseignement complémentaire et vous prions d'agréer, Madame, Monsieur, l'expression de nos salutations distinguées.
+
+[NOM DU SYNDIC]
+[ADRESSE]
+[EMAIL — TÉLÉPHONE]</pre>
+        <div style="margin-top:10px;padding:9px 13px;background:var(--cognac-pale);border-radius:7px;border:1px solid rgba(196,151,58,.2);font-size:12px;color:#8B6914">
+          <strong>Points de vigilance :</strong> Joindre impérativement le constat amiable ou le CR de RDF. Les photos doivent être géolocalisées et horodatées (CA Chambéry 24/06/25). En T2, préciser l'estimation de l'assiette pour anticiper la convocation de l'expert.
+        </div>
+      </div></div>
+    </div>
+
+    <!-- M2 — LRAR copropriétaire responsable -->
+    <div id="m2" class="model-block" style="display:none">
+      <div class="card"><div style="padding:20px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px">
+          <div>
+            <div style="font-family:'Cormorant',serif;font-size:17px;font-weight:700;color:var(--ink)">LRAR — Notification au copropriétaire responsable</div>
+            <div style="font-size:11.5px;color:var(--ink-3);margin-top:3px">Lettre recommandée avec AR — Art. 18 loi 65-557 — À envoyer sans délai après identification</div>
+          </div>
+          <button onclick="copyModel('m2-text')" class="btn btn-out btn-sm" style="flex-shrink:0">Copier</button>
+        </div>
+        <pre id="m2-text" class="model-text">LETTRE RECOMMANDÉE AVEC ACCUSÉ DE RÉCEPTION
+
+[Lieu], le [DATE]
+
+[NOM SYNDIC]
+[ADRESSE SYNDIC]
+
+À l'attention de M./Mme [NOM COPROPRIÉTAIRE RESPONSABLE]
+[ADRESSE DU COPROPRIÉTAIRE]
+
+Objet : Sinistre [RÉFÉRENCE] — Notification de responsabilité — Demande de déclaration auprès de votre assureur
+
+Madame, Monsieur,
+
+En qualité de syndic de la copropriété [NOM COPROPRIÉTÉ], sise [ADRESSE], nous avons été informés d'un sinistre [dégât des eaux / incendie] survenu le [DATE] ayant affecté le local appartenant à [NOM VICTIME], lot n° [XX].
+
+Les investigations menées [par votre professionnel mandaté / par l'expert de l'assureur gestionnaire] ont permis d'identifier que l'origine du sinistre provient de votre lot n° [XX] ([description : fuite robinetterie, défaut d'entretien canalisation…]).
+
+Nous vous demandons en conséquence de :
+
+1. Déclarer immédiatement ce sinistre auprès de votre assureur habitation (obligation légale sous peine de déchéance de garantie selon votre contrat).
+2. Nous communiquer les coordonnées de votre assureur (nom de la compagnie, numéro de contrat, coordonnées du gestionnaire) dans un délai de 5 jours ouvrés.
+3. Donner accès à votre lot à l'expert [NOM EXPERT] mandaté par l'Assureur Gestionnaire, qui vous contactera prochainement pour la réunion d'expertise.
+
+À défaut de réponse sous [10 jours], le syndicat des copropriétaires se verra contraint d'engager les procédures nécessaires pour la défense des intérêts des copropriétaires lésés.
+
+Nous vous rappelons que selon l'article 18 de la loi du 10 juillet 1965, le syndic est tenu de mettre en œuvre les décisions destinées à sauvegarder l'immeuble et à faire cesser tout trouble.
+
+Veuillez agréer, Madame, Monsieur, l'expression de nos salutations distinguées.
+
+[NOM DU SYNDIC]
+[ADRESSE]
+[EMAIL — TÉLÉPHONE]
+
+P.J. : Rapport de constat / CR de RDF — Photos du sinistre</pre>
+        <div style="margin-top:10px;padding:9px 13px;background:var(--crimson-pale);border-radius:7px;border:1px solid rgba(153,27,27,.15);font-size:12px;color:#991B1B">
+          <strong>Obligatoire en LRAR :</strong> L'AR doit être archivé dans le dossier — il constitue la preuve de la notification. Sans cet AR, la demande est inopposable en cas de litige. En T2, le rapport d'expertise est opposable à l'assureur du responsable même s'il refuse d'y participer (Art. 5.6).
+        </div>
+      </div></div>
+    </div>
+
+    <!-- M3 — Notification occupation / assurance -->
+    <div id="m3" class="model-block" style="display:none">
+      <div class="card"><div style="padding:20px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px">
+          <div>
+            <div style="font-family:'Cormorant',serif;font-size:17px;font-weight:700;color:var(--ink)">Demande d'informations — Occupation et assurance</div>
+            <div style="font-size:11.5px;color:var(--ink-3);margin-top:3px">Email ou courrier — Au CNO (copropriétaire non-occupant) pour identifier l'assureur gestionnaire</div>
+          </div>
+          <button onclick="copyModel('m3-text')" class="btn btn-out btn-sm" style="flex-shrink:0">Copier</button>
+        </div>
+        <pre id="m3-text" class="model-text">Objet : Sinistre [RÉFÉRENCE] — Demande d'informations — Occupation et assurance de votre lot n° [XX]
+
+Madame, Monsieur,
+
+Suite au sinistre [dégât des eaux / incendie] survenu le [DATE] en copropriété [NOM], ayant affecté le lot n° [XX] dont vous êtes propriétaire, nous avons besoin des informations suivantes pour désigner l'Assureur Gestionnaire au titre de la Convention IRSI.
+
+INFORMATIONS REQUISES DANS LES 48H
+
+1. OCCUPATION DU LOCAL AU JOUR DU SINISTRE
+   [ ] Occupé par vous-même (résidence principale / secondaire)
+   [ ] Loué à titre de résidence principale
+   [ ] Loué meublé / location saisonnière
+   [ ] Vacant au jour du sinistre
+   [ ] Congé donné ou reçu en cours
+
+2. SI LOCATAIRE EN PLACE — Coordonnées du locataire
+   Nom : ___________________
+   Téléphone : ___________________
+   Email : ___________________
+   Assureur habitation du locataire (si connu) : ___________________
+   N° de contrat : ___________________
+
+3. VOTRE ASSURANCE CNO (copropriétaire non-occupant)
+   Compagnie : ___________________
+   N° de contrat : ___________________
+   Contact gestionnaire sinistres : ___________________
+
+Ces informations sont indispensables pour désigner l'Assureur Gestionnaire et déclencher la procédure d'indemnisation dans les délais Convention IRSI (objectif : 30 jours en T1).
+
+À défaut de réponse sous 48h ouvrées, nous serons contraints de désigner l'Assureur de l'Immeuble à titre subsidiaire, avec un impact potentiel sur les délais d'indemnisation.
+
+Bien cordialement,
+
+[NOM DU SYNDIC]
+[EMAIL — TÉLÉPHONE]</pre>
+        <div style="margin-top:10px;padding:9px 13px;background:var(--cobalt-pale);border-radius:7px;border:1px solid rgba(29,78,216,.15);font-size:12px;color:#1D4ED8">
+          <strong>Quand l'utiliser :</strong> Dès que le local sinistré est privatif et que le syndic ne connaît pas le statut d'occupation ou les coordonnées assureur. En pratique : envoyer simultanément au CNO et au locataire connu si applicable.
+        </div>
+      </div></div>
+    </div>
+
+    <!-- M4 — Relance expert J+10 -->
+    <div id="m4" class="model-block" style="display:none">
+      <div class="card"><div style="padding:20px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px">
+          <div>
+            <div style="font-family:'Cormorant',serif;font-size:17px;font-weight:700;color:var(--ink)">Réponse LRAR expert — Coordonnées assureur immeuble</div>
+            <div style="font-size:11.5px;color:var(--ink-3);margin-top:3px">Obligatoire avant J+10 — Annexe 4 §3.6 — Sans réponse, rapport déposé sans coordonnées (blocage recours)</div>
+          </div>
+          <button onclick="copyModel('m4-text')" class="btn btn-out btn-sm" style="flex-shrink:0">Copier</button>
+        </div>
+        <pre id="m4-text" class="model-text">LETTRE RECOMMANDÉE AVEC ACCUSÉ DE RÉCEPTION
+
+[Lieu], le [DATE — impérativement avant J+10 de réception de la LRAR expert]
+
+[NOM SYNDIC]
+[ADRESSE]
+
+À l'attention de [NOM EXPERT]
+Cabinet [NOM CABINET]
+[ADRESSE EXPERT]
+
+Objet : Réponse — Coordonnées assureur immeuble — Dossier [RÉFÉRENCE] — Art. §3.6 Annexe 4 Convention IRSI
+
+Monsieur l'Expert,
+
+En réponse à votre lettre recommandée reçue le [DATE RÉCEPTION], nous vous communiquons les coordonnées de l'assureur de l'immeuble dans le cadre du dossier [RÉFÉRENCE] :
+
+ASSUREUR DE L'IMMEUBLE
+— Compagnie : [NOM COMPAGNIE]
+— Numéro de contrat : [N° CONTRAT]
+— Référence sinistre assureur : [REF SINISTRE si déjà déclaré]
+— Gestionnaire sinistres : [NOM]
+— Email : [EMAIL]
+— Téléphone : [TÉLÉPHONE]
+
+[Le cas échéant :]
+Nous vous informons également que ce sinistre présente un caractère répétitif (sinistre antérieur le [DATE] — référence [REF ANCIENNE]). L'attestation d'antécédent est jointe au présent courrier.
+
+[Le cas échéant :]
+Une RC professionnelle est susceptible d'être impliquée : [NOM PRESTATAIRE — coordonnées — nature des travaux]. Nous vous invitons à en tenir compte dans vos investigations.
+
+Nous demeurons disponibles pour vous recevoir lors de la réunion d'expertise.
+
+Veuillez agréer, Monsieur l'Expert, l'expression de nos salutations distinguées.
+
+[NOM DU SYNDIC]
+[EMAIL — TÉLÉPHONE]
+
+P.J. : Copie contrat assureur immeuble — Attestation antécédent sinistre (si applicable)</pre>
+        <div style="margin-top:10px;padding:9px 13px;background:var(--crimson-pale);border-radius:7px;border:1px solid rgba(153,27,27,.15);font-size:12px;color:#991B1B">
+          <strong>Délai impératif :</strong> J+10 à compter de la réception de la LRAR de l'expert. Sans réponse, l'expert peut déposer son rapport à J+30 sans les coordonnées assureur immeuble — ce qui bloque définitivement le recours de l'AG en T2. Conserver l'AR de cette lettre.
+        </div>
+      </div></div>
+    </div>
+
+    <!-- M5 — Mise en demeure Art. 3.4 sans délai -->
+    <div id="m5" class="model-block" style="display:none">
+      <div class="card"><div style="padding:20px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px">
+          <div>
+            <div style="font-family:'Cormorant',serif;font-size:17px;font-weight:700;color:var(--ink)">Transmission RDF — Art. 3.4 "Sans délai"</div>
+            <div style="font-size:11.5px;color:var(--ink-3);margin-top:3px">LRAR à l'assureur immeuble — Cause inlocalisable — Délai : sans délai à réception lettre expert</div>
+          </div>
+          <button onclick="copyModel('m5-text')" class="btn btn-out btn-sm" style="flex-shrink:0">Copier</button>
+        </div>
+        <pre id="m5-text" class="model-text">LETTRE RECOMMANDÉE AVEC ACCUSÉ DE RÉCEPTION — URGENT
+
+[Lieu], le [DATE]
+
+[NOM SYNDIC]
+[ADRESSE]
+
+À l'attention du Service Sinistres
+[NOM COMPAGNIE ASSUREUR IMMEUBLE]
+[ADRESSE]
+
+Objet : URGENT — Art. 3.4 Convention IRSI — Cause inlocalisable — Demande de RDF — Dossier [RÉFÉRENCE]
+
+Madame, Monsieur,
+
+Suite au sinistre [RÉFÉRENCE] survenu le [DATE] en copropriété [NOM], sise [ADRESSE], et conformément à l'article 3.4 de la Convention IRSI, nous vous informons par la présente que :
+
+1. L'Assureur Gestionnaire [NOM AG] n'a pas été en mesure de localiser la cause du sinistre lors de ses investigations initiales.
+
+2. L'expert [NOM EXPERT] nous a adressé une lettre en date du [DATE] nous demandant de « diligenter sans délai et sous notre contrôle des investigations de recherche de fuite ».
+
+3. En application de l'article 3.4, les frais de ces investigations incombent à votre compagnie en tant qu'assureur de l'immeuble.
+
+En conséquence, nous vous demandons de :
+
+— Mandater sans délai un professionnel qualifié pour effectuer la recherche de fuite dans [les parties communes / le lot n° XX — préciser].
+— Nous communiquer les coordonnées du prestataire mandaté afin que nous puissions coordonner les accès.
+— Transmettre le compte-rendu d'intervention à l'expert [NOM EXPERT — EMAIL] dès sa réalisation.
+
+Nous attirons votre attention sur le caractère d'urgence de cette demande : l'article 3.4 impose expressément une intervention « sans délai ». Toute tardiveté dans l'exécution de cette obligation expose le syndicat des copropriétaires à une aggravation du sinistre et à une mise en cause de responsabilité.
+
+Nous vous prions d'agréer, Madame, Monsieur, l'expression de nos salutations distinguées.
+
+[NOM DU SYNDIC]
+[EMAIL — TÉLÉPHONE]
+
+P.J. : Copie lettre expert du [DATE] — Photos état actuel des dégâts</pre>
+        <div style="margin-top:10px;padding:9px 13px;background:var(--crimson-pale);border-radius:7px;border:1px solid rgba(153,27,27,.15);font-size:12px;color:#991B1B">
+          <strong>Seule obligation "sans délai" de la Convention :</strong> C'est la formulation la plus forte de tout le texte IRSI — portée directement par le comportement du syndic. En cas de tardiveté, la responsabilité du syndicat peut être engagée directement. Conserver impérativement l'AR et horodater l'envoi.
+        </div>
+      </div></div>
+    </div>
+
+  </div>
   </div>
 </div>
 
@@ -3282,22 +3787,6 @@ td{border-bottom:1px solid #F0EFEC!important;color:var(--ink-2)!important;font-s
       <button class="btn btn-ghost btn-sm" onclick="closeM('m-na')">Annuler</button>
       <button class="btn btn-dark btn-sm" onclick="doNA()">Confirmer Non applicable</button>
     </div>
-
-
-</main>
-
-<!-- ════ MODAL N/A ════ -->
-<div class="modal-bg" id="m-na">
-  <div class="modal">
-    <div class="modal-title">Marquer comme Non applicable</div>
-    <div class="modal-sub">Précisez le motif. Cette entrée sera horodatée et versée au journal d'audit du dossier — elle est irréversible.</div>
-    <div class="fg"><label class="flabel">Motif obligatoire <span class="req">*</span></label><textarea class="fi" id="na-txt" placeholder="Ex : Cette obligation ne s'applique pas à ce dossier car la tranche T2 n'a pas été atteinte." style="min-height:90px"></textarea></div>
-    <div class="modal-foot">
-      <button class="btn btn-ghost btn-sm" onclick="closeM('m-na')">Annuler</button>
-      <button class="btn btn-dark btn-sm" onclick="doNA()">Confirmer Non applicable</button>
-    </div>
-  </div>
-</div>
 
 <!-- ════ MODAL Succès ════ -->
 <div class="modal-bg" id="m-ok">
@@ -3699,6 +4188,162 @@ function showGuide(id,btn){
   if(btn)btn.classList.add('on');
 }
 
+function showModel(id,btn){
+  document.querySelectorAll('.model-block').forEach(b=>b.style.display='none');
+  document.querySelectorAll('#gs11 .g-toc-btn').forEach(b=>b.classList.remove('on'));
+  const m=document.getElementById(id);if(m)m.style.display='block';
+  if(btn)btn.classList.add('on');
+}
+
+function copyModel(id){
+  const el=document.getElementById(id);
+  if(!el)return;
+  navigator.clipboard.writeText(el.textContent).then(()=>{
+    toast('Modèle copié dans le presse-papiers');
+  }).catch(()=>{
+    // Fallback
+    const ta=document.createElement('textarea');
+    ta.value=el.textContent;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    toast('Modèle copié');
+  });
+}
+
+function renderIRSITree(){
+  var c=document.getElementById('irsi-tree-container');
+  if(!c||c.innerHTML.trim()!=='')return;
+
+  var OK='#166534',KO='#991B1B',WARN='#B8882A',BLUE='#1D4ED8';
+  var NK='#F0FDF4',KNK='#FEF2F2',PNK='#FBF6E9',BNK='#EFF6FF';
+
+  function nd(id,label,bg,col){
+    return '<div style="display:inline-flex;flex-direction:column;align-items:center;gap:0">'
+      +'<div style="padding:6px 12px;background:'+bg+';color:'+col+';border:1.5px solid '+col+'40;border-radius:6px;font-weight:700;font-size:10.5px;max-width:190px;text-align:center;line-height:1.4">'
+      +id+'<br><span style="font-weight:400;font-size:10px">'+label+'</span></div>'
+      +'<div style="width:1px;height:12px;background:#9CA3AF"></div></div>';
+  }
+  function lf(label,sub,col,bg){
+    return '<div style="padding:6px 10px;background:'+bg+';border:1.5px solid '+col+'40;border-radius:6px;font-size:10px;color:'+col+';font-weight:700;max-width:160px;text-align:center;line-height:1.4;margin:2px;display:inline-block">'
+      +label+'<br><span style="font-weight:400;color:var(--ink-3)">'+sub+'</span></div>';
+  }
+  function lg(col,bg,label){
+    return '<div style="display:flex;align-items:center;gap:5px"><div style="width:12px;height:12px;border-radius:3px;background:'+bg+';border:1.5px solid '+col+'40"></div><span style="color:var(--ink-3);font-size:11px">'+label+'</span></div>';
+  }
+  function arr(){return '<div style="width:1px;height:12px;background:#9CA3AF;margin:0 auto"></div>';}
+  function row(content){return '<div style="display:flex;align-items:flex-start;justify-content:center;gap:8px;margin:4px 0">'+content+'</div>';}
+  function col(content,extra){return '<div style="display:flex;flex-direction:column;align-items:center;">'+(extra?extra:'')+'</div>';}
+
+  var h='<div style="min-width:860px;font-family:Figtree,sans-serif">';
+  h+='<div style="font-size:11px;color:var(--ink-3);margin-bottom:12px">Lire de haut en bas. Chaque losange bleu = question de qualification. Les nœuds colorés = résultats finaux.</div>';
+
+  // ── START NODE
+  h+='<div style="text-align:center;margin-bottom:4px">';
+  h+='<div style="display:inline-block;background:#0D1117;color:#fff;padding:6px 18px;border-radius:4px;font-weight:700;font-size:11px;letter-spacing:.5px">NOUVEAU SINISTRE — DDE ou Incendie</div>';
+  h+=arr()+'</div>';
+
+  // ── C1
+  h+='<div style="text-align:center">'+nd('C1','Un assureur a-t-il notifi\u00e9 sa non-adh\u00e9sion IRSI ?','#E0E7FF',BLUE)+'</div>';
+  h+='<div style="display:flex;align-items:flex-start;justify-content:center;gap:40px;margin:2px 0">';
+  h+='<div style="text-align:center">'+lf('Oui','Hors IRSI — droit commun<br>Art. 1.5',KO,KNK)+'</div>';
+  h+='<div style="text-align:center"><div style="font-size:10px;color:'+OK+';font-weight:700">Non</div>'+arr()+'</div></div>';
+
+  // ── C2
+  h+='<div style="text-align:center;margin-left:80px">'+nd('C2','Origine dans l\u2019immeuble ou mitoyen ?','#E0E7FF',BLUE)+'</div>';
+  h+='<div style="display:flex;align-items:flex-start;justify-content:center;gap:30px;margin:2px 0;margin-left:80px">';
+  h+='<div>'+lf('Non','Hors IRSI<br>Origine ext\u00e9rieure',KO,KNK)+'</div>';
+  h+='<div style="text-align:center"><div style="font-size:10px;color:'+OK+';font-weight:700">Oui / Mitoyen / Inconnu</div>'+arr()+'</div></div>';
+
+  // ── C3
+  h+='<div style="text-align:center;margin-left:140px">'+nd('C3','Cause express\u00e9ment exclue ?','#E0E7FF',BLUE)+'</div>';
+  h+='<div style="display:flex;justify-content:center;gap:30px;margin:2px 0;margin-left:140px">';
+  h+='<div>'+lf('Oui (ou pluralit\u00e9 dont une exclue)','Hors IRSI — Art. 1.1.1',KO,KNK)+'</div>';
+  h+='<div style="text-align:center"><div style="font-size:10px;color:'+OK+';font-weight:700">Non / Ind\u00e9termin\u00e9e</div>'+arr()+'</div></div>';
+
+  // ── C4
+  h+='<div style="text-align:center;margin-left:200px">'+nd('C4','Type de local sinistri\u00e9 ?','#E0E7FF',BLUE)+'</div>';
+  h+='<div style="display:flex;justify-content:center;gap:14px;margin:2px 0;margin-left:200px">';
+  h+='<div>'+lf('H\u00f4tel / Ch. d\u2019h\u00f4tes','Hors IRSI — toutes tranches',KO,KNK)+'</div>';
+  h+='<div>'+lf('Local pro/mixte partie pro','Hors IRSI si T2<br>IRSI en T1',WARN,PNK)+'</div>';
+  h+='<div style="text-align:center"><div style="font-size:10px;color:'+OK+';font-weight:700">Habitation</div>'+arr()+'</div></div>';
+
+  // ── Q4b
+  h+='<div style="text-align:center;margin-left:280px">'+nd('Q4b','Plusieurs locaux sinistr\u00e9s ?','#FEF9C3','#854D0E')+'</div>';
+  h+='<div style="display:flex;justify-content:center;gap:14px;margin:2px 0;margin-left:280px">';
+  h+='<div>'+lf('Oui','Tableau multi-lots<br>AG par lot — Art. 7.2.3',BLUE,BNK)+'</div>';
+  h+='<div style="text-align:center"><div style="font-size:10px;color:'+OK+';font-weight:700">Non — 1 local</div>'+arr()+'</div></div>';
+
+  // ── Q5
+  h+='<div style="text-align:center;margin-left:340px">'+nd('Q5','Local endommag\u00e9 = PC ou privatif ?','#F3E8FF','#6B21A8')+'</div>';
+  h+='<div style="display:flex;justify-content:center;gap:14px;margin:2px 0;margin-left:340px">';
+  h+='<div>'+lf('Parties communes','AG = Assureur immeuble<br>Art. 2.1.1',OK,NK)+'</div>';
+  h+='<div style="text-align:center"><div style="font-size:10px;color:'+OK+';font-weight:700">Privatif</div>'+arr()+'</div></div>';
+
+  // ── Q6
+  h+='<div style="text-align:center;margin-left:400px">'+nd('Q6','Occupation au jour du sinistre ?','#F3E8FF','#6B21A8')+'</div>';
+  h+='<div style="display:flex;justify-content:center;gap:14px;margin:2px 0;margin-left:400px">';
+  h+='<div>'+lf('Meuble / Vacant / Conge','Assureur CNO<br>ou immeuble (sub.)',WARN,PNK)+'</div>';
+  h+='<div style="text-align:center"><div style="font-size:10px;color:'+OK+';font-weight:700">Normale</div>'+arr()+'</div></div>';
+
+  // ── Q7
+  h+='<div style="text-align:center;margin-left:460px">'+nd('Q7','Qualit\u00e9 de l\u2019occupant ?','#F3E8FF','#6B21A8')+'</div>';
+  h+='<div style="display:flex;justify-content:center;gap:14px;margin:2px 0;margin-left:460px">';
+  h+='<div>'+lf('Copropri\u00e9taire','V\u00e9rif. auto-dommage<br>→ Q8',WARN,PNK)+'</div>';
+  h+='<div style="text-align:center"><div style="font-size:10px;color:'+OK+';font-weight:700">Locataire / autre</div>'+arr()+'</div></div>';
+
+  // ── Q8
+  h+='<div style="text-align:center;margin-left:520px">'+nd('Q8','Occupant assur\u00e9 ? (Art. 1.1.5)','#F3E8FF','#6B21A8')+'</div>';
+  h+='<div style="display:flex;justify-content:center;gap:14px;margin:2px 0;margin-left:520px">';
+  h+='<div>'+lf('Oui','AG = Assureur occupant<br>Cas 3',OK,NK)+'</div>';
+  h+='<div style="text-align:center"><div style="font-size:10px;color:WARN;font-weight:700">Non</div>'+arr()+'</div></div>';
+
+  // ── Q9
+  h+='<div style="text-align:center;margin-left:580px">'+nd('Q9','CNO assur\u00e9 ?','#F3E8FF','#6B21A8')+'</div>';
+  h+='<div style="display:flex;justify-content:center;gap:14px;margin:2px 0;margin-left:580px">';
+  h+='<div>'+lf('Oui','AG = Assureur CNO<br>Cas 4/6/8',OK,NK)+'</div>';
+  h+='<div>'+lf('Non','AG = Ass. immeuble<br>Subsidiarit\u00e9',BLUE,BNK)+'</div>';
+  h+='</div>';
+
+  // ── POST-AG (Q10/Q11)
+  h+='<div style="margin-top:18px;border-top:2px dashed #E5E5E3;padding-top:14px">';
+  h+='<div style="font-size:11px;color:var(--ink-3);margin-bottom:10px;font-weight:600">Apres d\u00e9signation de l\u2019AG — v\u00e9rifications post-qualification :</div>';
+  h+='<div style="display:flex;gap:16px;flex-wrap:wrap">';
+  h+='<div>'+nd('Q10','Sinistre r\u00e9p\u00e9titif < 24 mois ?','#FEF9C3','#854D0E');
+  h+='<div style="display:flex;gap:8px">'+lf('Oui','Recours T1 possible<br>Art. 7.1.2',WARN,PNK)+lf('Non','Abandon recours T1<br>Flux standard',OK,NK)+'</div></div>';
+  h+='<div>'+nd('Q11','Aggravation en cours ?','#FEF9C3','#854D0E');
+  h+='<div style="display:flex;gap:8px">'+lf('Oui','Alerte urgence<br>Titre 8',KO,KNK)+lf('Non','Continuer flux normal','',OK,NK)+'</div></div>';
+  h+='<div style="padding:10px 14px;background:var(--forest-pale);border-radius:8px;border:1px solid rgba(26,92,64,.15);font-size:11.5px;line-height:1.7">';
+  h+='<strong>R\u00e9sultats possibles :</strong><br>';
+  h+='Tranche T1 (\u2264 1600\u20ac) : abandon de recours<br>';
+  h+='Tranche T2 (1600\u20e0\u20135000\u20ac) : expertise + recours<br>';
+  h+='Hors IRSI (&gt; 5000\u20ac) : droit commun</div></div></div>';
+
+  // ── LEGEND
+  h+='<div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">';
+  h+=lg(OK,NK,'R\u00e9sultat positif / IRSI applicable');
+  h+=lg(KO,KNK,'Hors IRSI — sortie de convention');
+  h+=lg(WARN,PNK,'Avertissement / cas particulier');
+  h+=lg(BLUE,BNK,'Information compl\u00e9mentaire');
+  h+=lg('#1D4ED8','#E0E7FF','Question de qualification (C1\u2013C4, Q5\u2013Q11)');
+  h+='</div>';
+
+  h+='</div>';
+  c.innerHTML=h;
+}
+function node(id,label,bg,col){
+  return `<div style="display:inline-flex;flex-direction:column;align-items:center;gap:0">
+    <div style="padding:6px 12px;background:${bg};color:${col};border:1.5px solid ${col}40;border-radius:6px;font-weight:700;font-size:10.5px;max-width:200px;text-align:center;line-height:1.4">${id}<br><span style="font-weight:400;font-size:10px">${label}</span></div>
+    <div style="width:1px;height:12px;background:#9CA3AF"></div>
+  </div>`;
+}
+function leaf(id,label,sub,col,bg){
+  return `<div style="padding:6px 10px;background:${bg};border:1.5px solid ${col}40;border-radius:6px;font-size:10px;color:${col};font-weight:700;max-width:160px;text-align:center;line-height:1.4;margin:2px">${label}<br><span style="font-weight:400;color:var(--ink-3)">${sub}</span></div>`;
+}
+function arrow(dir){ return `<span style="color:#9CA3AF;font-size:12px">${dir==='right'?'→':'↓'}</span>`; }
+function legend(col,bg,label){ return `<div style="display:flex;align-items:center;gap:5px"><div style="width:12px;height:12px;border-radius:3px;background:${bg};border:1.5px solid ${col}40"></div><span style="color:var(--ink-3)">${label}</span></div>`; }
+
 // ════════════════════ INFO PANELS ════════════════════
 function toggleInfo(id){
   const p=document.getElementById(id);if(!p)return;
@@ -3998,11 +4643,9 @@ function selTiers(type){
   const wNonPro=document.getElementById('qt-nonpro-info');
   if(wPro)wPro.style.display=type==='pro'?'block':'none';
   if(wNonPro)wNonPro.style.display=type==='nonpro'?'block':'none';
-  if(multiLocal){
-    showMultiLotResult(); // multi-lots : afficher le résultat synthétique, pas Q5-Q11
-  } else {
-    show('q5z'); // flux standard
-  }
+  const labels={non:'Aucun tiers extérieur',pro:'RC professionnelle',nonpro:'RC non-professionnelle'};
+  recordAnswer('tiers', labels[type]||type, type==='pro'?'warn':'ok');
+  if(multiLocal){ showMultiLotResult(); } else { show('q5z'); }
 }
 
 function showMultiLotResult(){
@@ -4084,6 +4727,13 @@ function checkDateDelai(){
 function resetFromQ(fromQ){
   // Q10 and Q11 are post-AG flags — never reset agCalc or btn-n2 for them
   const isPostAG = fromQ >= 9;
+  // Remove trail entries for questions after fromQ
+  const qNums = [1,2,3,4,'4b','date','montant','tiers',5,6,7,8,9,10,11];
+  const fromIdx = qNums.indexOf(fromQ);
+  if(fromIdx >= 0 && !isPostAG){
+    qNums.slice(fromIdx+1).forEach(k=>delete trailAnswers[k]);
+    updateAnswerTrail(); updateQProgress();
+  }
   for(let i=fromQ+1;i<=11;i++){
     const z=document.getElementById('q'+i+'z');
     if(z)z.style.display='none';
@@ -4111,6 +4761,10 @@ function resetFromQ(fromQ){
     const ml=document.getElementById('multi-local-warn');if(ml)ml.style.display='none';
     const ni=document.getElementById('q3-indet-note');if(ni&&fromQ<=3)ni.style.display='none';
     const mr=document.getElementById('q_multi_result');if(mr)mr.style.display='none';
+    const rdf=document.getElementById('q_rdfz');if(rdf&&fromQ<=5)rdf.style.display='none';
+    const autod=document.getElementById('q_autodz');if(autod&&fromQ<=7)autod.style.display='none';
+    const qmit=document.getElementById('q2-mitoyen-warn');if(qmit&&fromQ<=2)qmit.style.display='none';
+    const qmix=document.getElementById('q4-mixte-z');if(qmix&&fromQ<=4)qmix.style.display='none';
   }
 }
 
@@ -4213,16 +4867,121 @@ function selMontant(tranche){
   const el=document.getElementById(map[tranche]);if(el)el.classList.add('on');
   const hw=document.getElementById('qm-hors-warn');
   if(hw)hw.style.display=tranche==='hors'?'block':'none';
+  const labels={'t1':'T1 — ≤ 1 600 € HT','t2':'T2 — 1 600–5 000 € HT','hors':'Hors convention > 5 000 €'};
+  recordAnswer('montant', labels[tranche]||tranche, tranche==='hors'?'ko':(tranche==='t2'?'warn':'ok'));
   show('q_tiersz');
+}
+
+// ─── C2 MITOYEN ───
+function ansQ2mitoyen(){
+  qA[2]='mitoyen';
+  ['q2-o','q2-n','q2-u','q2-mit'].forEach(id=>{const e=document.getElementById(id);if(e)e.classList.remove('on');});
+  const b=document.getElementById('q2-mit');if(b)b.classList.add('on');
+  const w=document.getElementById('q2-mitoyen-warn');if(w)w.style.display='block';
+  show('q3z');// IRSI applicable si assureur mitoyen adhère — on continue
+}
+
+// ─── C4 MIXTE ───
+let mixteType=null;
+function selMixte(type){
+  mixteType=type;
+  ['qmix-hab','qmix-pro'].forEach(id=>{const e=document.getElementById(id);if(e)e.classList.remove('on');});
+  const el=document.getElementById('qmix-'+type);if(el)el.classList.add('on');
+  const w=document.getElementById('qmix-pro-warn');
+  if(w)w.style.display=type==='pro'?'block':'none';
+  // both cases continue to Q4b — mixte pro will alert later at tranche check
+}
+
+// ─── RDF ORGANISATEUR ───
+function selRDF(who){
+  ['qrdf-syndic','qrdf-ag','qrdf-occ'].forEach(id=>{const e=document.getElementById(id);if(e)e.classList.remove('on');});
+  const el=document.getElementById('qrdf-'+who);if(el)el.classList.add('on');
+  const r=document.getElementById('qrdf-result');if(!r)return;
+  r.style.display='block';
+  if(who==='syndic'){
+    r.style.background='var(--cognac-pale)';r.style.border='1.5px solid rgba(160,92,20,.2)';r.style.color='var(--cognac)';
+    r.innerHTML='<strong>RDF organisée par le syndic :</strong> si la fuite trouve son origine dans un lot privatif, c\'est l\'assureur du copropriétaire (occupant ou CNO) qui prend en charge les frais — même s\'il n\'est pas responsable conventionnellement (règle juillet 2020). Ces frais ne sont <em>pas</em> intégrés dans l\'assiette IRSI.';
+  } else if(who==='ag'){
+    r.style.background='var(--forest-pale)';r.style.border='1.5px solid rgba(26,92,64,.2)';r.style.color='var(--forest)';
+    r.innerHTML='<strong>RDF organisée par l\'AG :</strong> les frais sont intégrés dans l\'assiette T1/T2 et peuvent faire l\'objet d\'un recours si > 1 600 € HT.';
+  } else {
+    r.style.background='var(--cobalt-pale)';r.style.border='1.5px solid rgba(43,78,168,.15)';r.style.color='var(--cobalt-mid)';
+    r.innerHTML='<strong>RDF organisée par l\'occupant/copropriétaire :</strong> prise en charge par son assureur. Recours possible si > 1 600 € HT sur base facture + barème.';
+  }
+}
+
+// ─── AUTO-DOMMAGE ───
+function ansAutoD(isSelfDamage){
+  const bo=document.getElementById('qautod-oui'),bn=document.getElementById('qautod-non');
+  if(bo)bo.classList.toggle('on',isSelfDamage);
+  if(bn)bn.classList.toggle('on',!isSelfDamage);
+  if(isSelfDamage){
+    showKO('Art. 1.1 — Le copropriétaire occupant est à la fois victime et responsable dans son propre lot. Le réputé garanti IRSI ne s\'applique pas aux dommages que l\'assuré se cause à lui-même. Traitement par le contrat d\'assurance personnelle.');
+    enableN2();
+  } else {
+    show('q8z');
+  }
+}
+
+// ════ WIZARD VISUAL — progress + trail ════
+const Q_LABELS = {
+  1:'C1 — Adhésion IRSI', 2:'C2 — Origine', 3:'C3 — Cause',
+  4:'C4 — Type local', '4b':'Multi-lots', date:'Dates / J+5',
+  montant:'Tranche estimée', tiers:'Tiers impliqué',
+  5:'Local endommagé', 6:'Occupation', 7:'Qualité occupant',
+  8:'Occupant assuré', 9:'CNO assuré', 10:'Répétitif', 11:'Aggravation'
+};
+const trailAnswers = {};
+
+function recordAnswer(key, label, type){
+  trailAnswers[key] = {label, type}; // type: 'ok','ko','warn'
+  updateAnswerTrail();
+  updateQProgress();
+}
+
+function updateAnswerTrail(){
+  const trail = document.getElementById('answer-trail');
+  if(!trail) return;
+  const entries = Object.entries(trailAnswers);
+  if(!entries.length){ trail.style.display='none'; return; }
+  trail.style.display='flex';
+  trail.innerHTML = entries.map(([k,v])=>`
+    <div class="trail-row">
+      <span class="trail-q">${Q_LABELS[k]||k}</span>
+      <span class="trail-a ${v.type}">${v.label}</span>
+    </div>`).join('');
+}
+
+function updateQProgress(){
+  const fill = document.getElementById('q-progress-fill');
+  const lbl = document.getElementById('q-progress-label');
+  const total = 11;
+  const done = Object.keys(trailAnswers).length;
+  const pct = Math.min(100, Math.round(done/total*100));
+  if(fill) fill.style.width = pct+'%';
+  if(lbl) lbl.textContent = `Étape ${done+1} / ${total}`;
+}
+
+function resetTrail(){
+  Object.keys(trailAnswers).forEach(k=>delete trailAnswers[k]);
+  updateAnswerTrail();
+  updateQProgress();
 }
 
 function ansQ(q,val){
   resetFromQ(q);
   qA[q]=val;
 
-  // Pour les questions C (1-4) et Q (8-9), "je ne sais pas" crée un item pending
-  // ET continue le wizard avec l'hypothèse favorable (IRSI maintenu)
-  const isUnk = val==='unk';
+  // Record for trail
+  const isUnk = val==='unk'||val==='indet';
+  if(q===1) recordAnswer(1, val===true?'Non — standard':(isUnk?'Inconnu':'Oui — Hors IRSI'), val===false?'ko':(isUnk?'warn':'ok'));
+  if(q===2) recordAnswer(2, val===true?'Oui — immeuble':(val==='mitoyen'?'Mitoyen':(isUnk?'Inconnu':'Non — Hors IRSI')), val===false?'ko':(isUnk?'warn':'ok'));
+  if(q===3) recordAnswer(3, val===true?'Cause exclue':(val==='indet'?'Indéterminée':'Cause couverte'), val===true?'ko':(val==='indet'?'warn':'ok'));
+  if(q===4) recordAnswer(4, val==='hotel'?'Hôtel — Hors IRSI':(val==='pro'?'Pro/mixte — T1 ok':(isUnk?'Inconnu':'Habitation')), val==='hotel'?'ko':(val==='pro'?'warn':'ok'));
+  if(q===8) recordAnswer(8, val===true?'Assuré':(isUnk?'Inconnu':'Non assuré'), val===true?'ok':(isUnk?'warn':'warn'));
+  if(q===9) recordAnswer(9, val===true?'CNO assuré':(isUnk?'Inconnu':'CNO non assuré'), val===true?'ok':'warn');
+  if(q===10) recordAnswer(10, val===true?'Oui — répétitif':'Non', val===true?'warn':'ok');
+  if(q===11) recordAnswer(11, val===true?'Aggravation présente':'Non', val===true?'warn':'ok');
   if(isUnk) showPendBanner(q); // affiche la bannière pending sous la question
 
   if(q===1){
@@ -4242,8 +5001,11 @@ function ansQ(q,val){
   }
   else if(q===4){
     if(!isUnk && val==='hotel'){showKO('C4 — chambre d\'hôtel ou chambre d\'hôtes : local toujours exclu (Art. 1.1.2).');enableN2();return;}
-    if(!isUnk && val==='pro'){showEl('c4-pro-warn');}
-    show('q4bz'); // unk ou autre → continuer
+    if(!isUnk && val==='pro'){
+      showEl('c4-pro-warn');
+      showEl('q4-mixte-z');// demander quelle partie du local mixte est sinistrée
+    }
+    show('q4bz');
   }
   else if(q===8){
     if(isUnk){
@@ -4276,22 +5038,22 @@ function ansQ(q,val){
 function showEl(id){const e=document.getElementById(id);if(e)e.style.display='block';}
 function selLocal(type){
   resetFromQ(5);
-  if(type==='com')calcAG('immeuble');else show('q6z');
+  recordAnswer(5, type==='com'?'Parties communes':'Local privatif', 'ok');
+  if(type==='com'){ calcAG('immeuble'); show('q_rdfz'); } else { show('q6z'); }
 }
 function selOcc(val){
   if(!val)return;
   resetFromQ(6);
-  if(val==='normale')show('q7z');
-  else {
-    // Meublé/saisonnier/congé/vacant → AG = assureur CNO (ou immeuble si CNO non assuré)
-    // Art. 2.1.1 exception
-    show('q9z');
-  }
+  const labels={'normale':'Occupation normale','meuble':'Meublé/saisonnier','vacant':'Vacant','conge':'Congé'};
+  recordAnswer(6, labels[val]||val, 'ok');
+  if(val==='normale')show('q7z'); else show('q9z');
 }
 function selOccupant(type){
   resetFromQ(7);
+  const labels={'copro':'Copropriétaire','loc':'Locataire','autre':'Autre occupant'};
+  recordAnswer(7, labels[type]||type, 'ok');
   occupantType=type;
-  show('q8z');
+  if(type==='copro'){ show('q_autodz'); } else { show('q8z'); }
 }
 function calcAG(scenario){
   const labels={
@@ -4311,35 +5073,88 @@ function showAggrWarn(){const e=document.getElementById('aggr-warn');if(e)e.styl
 function showOK(ag){
   const ir=document.getElementById('irsi-res');if(!ir)return;
   ir.className='irsi-res irsi-ok';ir.style.display='flex';ir.style.animation='fadeUp .22s ease';
-  // Build contextual note based on scenario
+
+  // Note 2 locaux privatifs
   let note='';
   if(occupantType==='loc'||occupantType==='autre'){
     note=`<div style="margin-top:10px;padding:9px 12px;background:rgba(26,92,64,.07);border-radius:6px;border-left:3px solid var(--forest-mid);font-size:12px;line-height:1.6">
-      <strong>Cas DDE entre deux locaux privatifs :</strong> L'AG désigné gère le sinistre pour le <em>local endommagé</em>.
-      Si la cause provient d'un autre appartement (voisin du dessus, etc.), son occupant sera identifié comme <strong>responsable conventionnel</strong> par l'expert selon le barème Annexe 1.
-      <br>→ <strong>T1 (≤ 1 600 € HT) :</strong> abandon de recours entre assureurs — l'AG indemnise sans recours.
-      <br>→ <strong>T2 (> 1 600 € HT) :</strong> recours possible de l'AG contre l'assureur du responsable (Art. 7.2).
-      <br>Le syndic n'a pas à ouvrir un second dossier IRSI pour le local responsable — sauf si ce local a lui-même subi des dommages matériels.
+      <strong>DDE entre deux locaux privatifs :</strong> l'AG gère le local endommagé. Le responsable est identifié par l'expert (barème Annexe 1).
+      T1 ≤ 1 600 € : abandon de recours. T2 > 1 600 € : recours possible (Art. 7.2).
     </div>`;
   } else if(occupantType==='copro'){
     note=`<div style="margin-top:10px;padding:9px 12px;background:rgba(26,92,64,.07);border-radius:6px;border-left:3px solid var(--forest-mid);font-size:12px;line-height:1.6">
-      <strong>Cas DDE entre deux lots privatifs :</strong> L'AG désigné gère le sinistre pour le lot endommagé.
-      Le lot responsable (d'où vient la cause) sera identifié par l'expert via le barème Annexe 1.
-      <br>→ <strong>T1 :</strong> abandon de recours. → <strong>T2 :</strong> recours possible (Art. 7.2).
-      <br>Un seul dossier IRSI suffit pour le lot endommagé — sauf si le lot responsable a lui aussi des dommages propres.
+      <strong>DDE entre lots privatifs :</strong> T1 = abandon de recours. T2 = recours possible (Art. 7.2). Un seul dossier par lot endommagé.
     </div>`;
   }
-  // Multi-local note
+
+  // Tiers professionnel en T2 — restriction critique
+  let tierNote='';
+  if(tiersType==='pro' && montantTranche==='t2'){
+    tierNote=`<div style="margin-top:10px;padding:9px 12px;background:#FBF6E9;border-radius:6px;border-left:3px solid var(--cognac-mid);font-size:12px;line-height:1.6">
+      <strong>RC professionnelle + T2 :</strong> l'IRSI entre assureurs de locaux ne s'applique <em>qu'en T1</em> (Art. 1.1.3). En T2, le recours contre le professionnel (plombier, entrepreneur…) s'exerce <strong>uniquement en droit commun</strong>, hors protocole IRSI. L'expertise pour compte commun est quand même réalisée mais le mécanisme de recours change.
+    </div>`;
+  } else if(tiersType==='nonpro'){
+    tierNote=`<div style="margin-top:10px;padding:9px 12px;background:rgba(43,78,168,.07);border-radius:6px;border-left:3px solid var(--cobalt-mid);font-size:12px;line-height:1.6">
+      <strong>Tiers non-professionnel :</strong> IRSI applicable toutes tranches. Les conclusions du rapport d'expertise commun sur l'évaluation des dommages sont <strong>opposables à l'assureur RC "vie privée"</strong> du tiers (Art. 1.1.3b).
+    </div>`;
+  }
+
+  // RDF : qui organise ?
+  const rdfMap={
+    'syndic':'Si la fuite est dans un lot privatif, c\'est l\'<strong>assureur du copropriétaire (occupant ou CNO)</strong> qui prend en charge les frais RDF — même sans responsabilité conventionnelle (règle juillet 2020).',
+    'ag':'Frais RDF intégrés dans l\'assiette T1/T2. Recours possible si > 1 600 € HT.',
+    'occ':'RDF organisée par l\'occupant — remboursement par son assureur. Recours si > 1 600 € HT.'
+  };
+  // Don't know who → show rule
+  const rdfNote=`<div style="margin-top:10px;padding:9px 12px;background:#F9F9F8;border-radius:6px;border-left:3px solid #D1D5DB;font-size:12px;line-height:1.6">
+    <strong>Qui organise la RDF (règle juillet 2020) :</strong><br>
+    • Assureur de l'occupant → dans son local.<br>
+    • Assureur du CNO → si RDF destructive, local vacant/meublé/congé, occupant non assuré.<br>
+    • Assureur de l'immeuble → parties communes + subsidiarité copropriétaire non assuré.<br>
+    Seuls les frais indemnisés par l'AG entrent dans l'assiette.
+  </div>`;
+
+  // Subsidiarité → action en récupération
+  let recupNote='';
+  if(ag.includes('subsidiaire')||ag.includes('subsidiarité')){
+    recupNote=`<div style="margin-top:10px;padding:9px 12px;background:var(--crimson-pale);border-radius:6px;border-left:3px solid var(--crimson-mid);font-size:12px;line-height:1.6">
+      <strong>Action en récupération (Art. 10) :</strong> l'assureur de l'immeuble intervient en subsidiarité car le copropriétaire n'est pas assuré. Il peut exercer une action en récupération contre ce copropriétaire. <strong>Prescription : 2 ans à compter du paiement.</strong> À surveiller impérativement.
+    </div>`;
+  }
+
+  // Incendie — règles barème spécifiques
+  let incNote='';
+  if(sType==='inc'){
+    incNote=`<div style="margin-top:10px;padding:9px 12px;background:rgba(125,26,29,.06);border-radius:6px;border-left:3px solid var(--crimson-mid);font-size:12px;line-height:1.6">
+      <strong>Incendie — règles barème spécifiques (Art. 7 incendie) :</strong><br>
+      • Relations bailleur-locataire : recours <em>sans possibilité d'exonération</em>.<br>
+      • Communication d'incendie entre lots : <strong>abandon de recours</strong> (barème incendie).<br>
+      Ces règles diffèrent du barème DDE — vérifiez le type de relation (bailleur/locataire ou communication) avec l'expert.
+    </div>`;
+  }
+
+  // Prescription générale
+  const prescNote=`<div style="margin-top:10px;padding:9px 12px;background:#F9F9F8;border-radius:6px;border-left:3px solid #D1D5DB;font-size:12px;line-height:1.6">
+    <strong>Prescriptions à surveiller :</strong>
+    Action en remboursement (Art. 9) : <strong>2 ans</strong> à compter du paiement de l'indemnité.
+    Action en récupération (Art. 10) : <strong>2 ans</strong> à compter du paiement.
+    En cas de litige sur l'application de l'IRSI → <strong>procédure CORAL</strong> (arbitrage GCA) avant tout recours judiciaire.
+  </div>`;
+
+  // Multi-lots note
   let multiNote='';
   if(multiLocal){
     multiNote=`<div style="margin-top:10px;padding:9px 12px;background:rgba(43,78,168,.07);border-radius:6px;border-left:3px solid var(--cobalt-mid);font-size:12px;line-height:1.6">
-      <strong>Sinistre multi-lots :</strong> cet AG est désigné pour le local principal que vous avez qualifié.
-      Relancez le wizard pour chaque lot supplémentaire endommagé — chacun aura potentiellement un AG différent selon son profil d'occupation.
-      <br><strong>Art. 7.2.3 :</strong> si le même responsable est impliqué pour tous les lots, le recours s'exercera en <em>parts égales</em> entre assureurs concernés, sans solidarité.
-      <br><strong>Expertise commune :</strong> un seul expert pour compte commun couvrira l'ensemble des lots (Annexe 4 §2.1).
+      <strong>Multi-lots :</strong> expertise commune pour tous les lots (Annexe 4 §2.1). Recours en parts égales si responsable commun, sans solidarité (Art. 7.2.3).
     </div>`;
   }
-  ir.innerHTML=`<span class="irsi-icon"></span><div style="flex:1"><div class="irsi-title">Éligible — Convention IRSI applicable</div><div class="irsi-text">Les conditions d'entrée (Art. 1.1) sont remplies. Le dossier sera traité selon le protocole IRSI.</div><div class="irsi-ag-box"> Assureur gestionnaire désigné : <strong>${ag}</strong></div>${note}${multiNote}</div>`;
+
+  ir.innerHTML=`<div style="flex:1">
+    <div class="irsi-title">Éligible — Convention IRSI applicable</div>
+    <div class="irsi-text">Les conditions d'entrée (Art. 1.1) sont remplies.</div>
+    <div class="irsi-ag-box">Assureur gestionnaire désigné : <strong>${ag}</strong></div>
+    ${note}${tierNote}${incNote}${rdfNote}${recupNote}${prescNote}${multiNote}
+  </div>`;
 }
 function showKO(reason){
   const ir=document.getElementById('irsi-res');if(!ir)return;
